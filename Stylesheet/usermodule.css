@@ -2,11 +2,6 @@
     display: flex;
     min-height: 100vh;
 }
-
-.sidebar {
-    background-color: #000080;
-}
-
 .right-bar {
     display: flex;
     flex-direction: column;
@@ -18,150 +13,182 @@
     margin: 0 auto;
 }
 
-.container .submenu {
+
+/* ///////////////////////////////////Sidebar */
+
+.sidebar {
+    background-color: #000080;
+    padding: 20px 5px;
+}
+  .container .menu{
+    color: white;
+    padding: 10px;
+  }
+  .container .submenu , .container .submenu-items  {
     list-style-type: none;
     padding: 0;
     width: 200px;
     color: white;
-}
+  }
+  .container .submenu-items{
+    background: #0000c0;
+  }
 
-.container .submenu>li .submenu-items {
+  .container .submenu-items li{
+    border: 1px solid white;
+
+  }
+  .container .submenu > li > .toggle-menu {
     display: none;
-    list-style-type: none;
-}
-
-.container .submenu>li:hover .submenu-items {
-    display: block;
-}
-
-.container .submenu>li label {
+  }
+  
+  .container .submenu > li > label {
     display: block;
     padding: 10px;
     cursor: pointer;
-}
-
-.container .submenu>li .submenu-items li a {
+  }
+  
+  .container .submenu > li > .submenu-items {
+    display: none;
+  }
+  
+  .container .submenu > li > .toggle-menu:checked ~ .submenu-items {
+    display: block;
+  }
+  
+  .container .submenu > li > .submenu-items li a {
     display: block;
     padding: 10px;
     text-decoration: none;
     color: white;
-}
-
-.container>div {
+  }
+  
+  .container .submenu > li > label::after {
+    content: "\25BA";
+    float: right;
+    margin-left: 5px;
+    transform: rotate(0deg);
+    transition: transform 0.2s;
+  }
+  
+  .container .submenu > li > .toggle-menu:checked ~ label::after {
+    transform: rotate(90deg);
+  }
+  
+  .container>div {
     display: none;
     padding: 20px;
-}
-
-.container>div:target {
+  }
+  
+  .container>div:target {
     display: block;
-}
-
-.container>div h3 {
+  }
+  
+  .container>div h3 {
     margin-top: 0;
-}
-
-.container>div table {
+  }
+  
+  .container>div table {
     width: 100%;
     border-collapse: collapse;
-}
-
-.container>div table th,
-.container>div table td {
+  }
+  
+  .container>div table th,
+  .container>div table td {
     padding: 8px;
     text-align: left;
     border-bottom: 1px solid #ddd;
-}
-
-.container>div table th {
+  }
+  
+  .container>div table th {
     background-color: #f1f1f1;
-}
-
-.container>div table tbody tr:hover {
+  }
+  
+  .container>div table tbody tr:hover {
     background-color: #f5f5f5;
-}
-
-.container .tabs {
+  }
+  
+  .container .tabs {
     list-style-type: none;
     padding: 0;
     margin-top: 20px;
-}
-
-.container .tabs li {
+  }
+  
+  .container .tabs li {
     display: inline-block;
     margin-right: 10px;
-}
-
-.container .tabs li a {
+  }
+  
+  .container .tabs li a {
     text-decoration: none;
     color: #333;
-}
-
-.container .tabs li a.active {
+  }
+  
+  .container .tabs li a.active {
     font-weight: bold;
-}
-
-.container .tabs~div {
+  }
+  
+  .container .tabs ~ div {
     display: none;
-}
-
-.container .tabs~div:target {
+  }
+  
+  .container .tabs ~ div:target {
     display: block;
-}
-
-.container .tabs~div h4 {
+  }
+  
+  .container .tabs ~ div h4 {
     margin-top: 0;
     margin-bottom: 10px;
-}
-
-.container .tabs~div table {
+  }
+  
+  .container .tabs ~ div table {
     width: 100%;
     border-collapse: collapse;
-}
-
-.container .tabs~div table th,
-.container .tabs~div table td {
+  }
+  
+  .container .tabs ~ div table th,
+  .container .tabs ~ div table td {
     padding: 8px;
     text-align: left;
     border-bottom: 1px solid #ddd;
-}
-
-.container .tabs~div table th {
+  }
+  
+  .container .tabs ~ div table th {
     background-color: #f1f1f1;
-}
-
-.container .tabs~div table tbody tr:hover {
+  }
+  
+  .container .tabs ~ div table tbody tr:hover {
     background-color: #f5f5f5;
-}
-
-.container .tabs~div button {
+  }
+  
+  .container .tabs ~ div button {
     margin-right: 5px;
-}
-
-.container .tabs~div input[type="text"],
-.container .tabs~div input[type="submit"] {
+  }
+  
+  .container .tabs ~ div input[type="text"],
+  .container .tabs ~ div input[type="submit"] {
     margin-top: 10px;
-}
-
-.container .tabs~div label {
+  }
+  
+  .container .tabs ~ div label {
     margin-left: 5px;
-}
+  }
+/* ////////////////////////////Sidebar end */
 
 
-.usermodule {
-    background-color: #99b4d1;
-}
 
-.usermodule form {
+.usermodule .user-form {
  
-    background-color: #99b4d1;
-    margin: 0 auto;
+    background-color: #f0f0f0;
+    margin: 30px auto;
+    
+
 
 }
 
 
 .usermodule label {
     display: block;
-    margin-bottom: 10px;
     text-align: left;
     font-size: 1.2em;
     line-height: 1.2;
@@ -169,28 +196,36 @@
 
 }
 
-.usermodule input {
-    width: 70%;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    margin-bottom: 20px;
+.usermodule input { 
     font-size: 1.2em;
     line-height: 1.5;
 }
 
 .usermodule .form-group {
     display: flex;
-    align-items: center;
+
+}
+.form-group > label,
+.form-group > input,
+.form-group > select {
+  border: 1px solid #d2d2d2;
+  padding: 8px;
 }
 
-.usermodule input {
+.usermodule .input-field , .usermodule select {
     width: 65%;
 }
 
 .usermodule .usermodule-btn {
     text-align: center;
 }
-
+.usermodule .form-group.form-action
+{
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+    margin: 0 auto;
+}
 .usermodule button[type="submit"] {
     background-color: #e1e1e1;
     color: black;
@@ -227,24 +262,3 @@
         line-height: 1.5;
     }
 }
-.container .tab-panel {
-    display: none;
-    padding: 20px;
-    background-color: #99b4d1;
-}
-
-.container .tab-links a {
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-    color: white;
-}
-
-.container .tab-links a.active {
-    background-color: #000080;
-}
-
-.container .tab-panel:target {
-    display: block;
-}
-

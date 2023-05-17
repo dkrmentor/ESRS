@@ -2,204 +2,241 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Module Interface</title>
-    <link rel="stylesheet" href="../Stylesheet/style.css">
-    <link rel="stylesheet" href="../Stylesheet/usermodule.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Module Interface</title>
+  <link rel="stylesheet" href="../Stylesheet/style.css">
+  <link rel="stylesheet" href="../Stylesheet/usermodule.css">
 
 </head>
 
 <body>
-    <div class="usermodule-page">
+  <div class="usermodule-page">
 
-        <sidebar class="sidebar container">
-            <ul class="submenu">
-                <li>
-                    <label for="toggle-menu">User</label>
-                    <ul class="submenu-items">
-                        <li><a href="#add-user">Add New User</a></li>
-                        <li><a href="#view-users">View User List</a></li>
-                        <li><a href="#role-permission">Role/Permission</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </sidebar>
+    <sidebar class="sidebar container">
+      <label class="menu">Main Menu</label>
 
-        <div class="right-bar">
+      <ul class="submenu">
+        <li>
+          <input type="checkbox" id="toggle-user" class="toggle-menu">
+          <label for="toggle-user">User</label>
+          <ul class="submenu-items">
+            <li><a href="#add-user">Add New User</a></li>
+            <li><a href="#view-users">View User List</a></li>
+            <li><a href="#role-permission">Role/Permission</a></li>
+          </ul>
+        </li>
+        <li>
+          <input type="checkbox" id="toggle-taxpayer" class="toggle-menu">
+          <label for="toggle-taxpayer">Tax Payer</label>
+          <ul class="submenu-items">
+            <li><a href="#reg-tax-payer">Register New Tax Payer</a></li>
+            <li><a href="#view-tax-payer">View Tax Payer List</a></li>
+          </ul>
+        </li>
+        <li>
+          <input type="checkbox" id="toggle-reports" class="toggle-menu">
+          <label for="toggle-reports">Reports</label>
+          <ul class="submenu-items">
+            <li><a href="#sale-report">Sales Report</a></li>
+            <li><a href="#exp-report">Expenses Report</a></li>
+            <li><a href="#inventory-report">Inventory Report</a></li>
+            <li><a href="#act-report">User Activity Report</a></li>
+          </ul>
+        </li>
+        <li>
+          <input type="checkbox" id="toggle-stores" class="toggle-menu">
+          <label for="toggle-stores">Stores</label>
+          <ul class="submenu-items">
+            <li><a href="#add-store">Register New Store</a></li>
+            <li><a href="#view-store">View Store List</a></li>
+          </ul>
+        </li>
+      </ul>
+    </sidebar>
+    
+    
+    
 
-            <header class="main-header">
-                <div class="logo">
-                    <img src="../assets/logo.png" alt="Ministry of Revenue and Customs">
-                </div>
-                <div class="title">
-                    <p>Ministry of Revenue and Customs</p>
-                    <p>Government of Tonga</p>
-                    <p>POS Portal</p>
-                </div>
-            </header>
+    <div class="right-bar">
 
-            <main class="container usermodule">
-                <div id="add-user">
-                    <h3>Add New User</h3>
-                    <form>
-                        <div class="form-group">
-                            <label for="user-id">User ID:</label>
-                            <input type="text" id="user-id" name="user-id" value="">
-                        </div>
-                        <div class="form-group">
-                            <label for="role-type">Role Type:</label>
-                            <select id="role-type" name="role-type">
-                                <option value="admin">Admin</option>
-                                <option value="editor">Editor</option>
-                                <option value="viewer">Viewer</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="first-name">First Name:</label>
-                            <input type="text" id="first-name" name="first-name" value="">
-                        </div>
-                        <div class="form-group">
-                            <label for="last-name">Last Name:</label>
-                            <input type="text" id="last-name" name="last-name" value="">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" value="">
-                        </div>
-                        <div class="form-group">
-                            <label for="password">Password:</label>
-                            <input type="password" id="password" name="password">
-                        </div>
-                        <div class="form-group">
-                            <input type="submit" value="Save">
-                        </div>
-                    </form>
-                </div>
+      <header class="main-header">
+        <div class="logo">
+          <img src="../assets/logo.png" alt="Ministry of Revenue and Customs">
+        </div>
+        <div class="title">
+          <p>Ministry of Revenue and Customs</p>
+          <p>Government of Tonga</p>
+          <p>POS Portal</p>
+        </div>
+      </header>
 
-                <div id="view-users">
-                    <h3>View User List</h3>
-                    <form>
-                        <div class="form-group">
-                            <label for="user-search">Search:</label>
-                            <input type="text" id="user-search" name="user-search" value="">
-                        </div>
-                        <div class="form-group">
-                            <input type="submit" value="Search">
-                        </div>
-                    </form>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>User ID</th>
-                                <th>Last Name</th>
-                                <th>First Name</th>
-                                <th>Role Type</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>001</td>
-                                <td>Doe</td>
-                                <td>John</td>
-                                <td>Admin</td>
-                            </tr>
-                            <tr>
-                                <td>002</td>
-                                <td>Smith</td>
-                                <td>Jane</td>
-                                <td>Editor</td>
-                            </tr>
-                            <tr>
-                                <td>003</td>
-                                <td>Williams</td>
-                                <td>Mark</td>
-                                <td>Viewer</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+      <main class="container usermodule">
+        <div id="add-user">
+          <h3>Add New User</h3>
+          <form>
+            <div class="user-form">
+            <div class="form-group">
+              <label for="user-id">User ID:</label>
+              <input class="input-field" type="text" id="user-id" name="user-id" value="">
+            </div>
+            <div class="form-group">
+              <label for="role-type">Role Type:</label>
+              <select id="role-type" name="role-type">
+                <option value="admin">Admin</option>
+                <option value="editor">Editor</option>
+                <option value="viewer">Viewer</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="first-name">First Name:</label>
+              <input class="input-field" type="text" id="first-name" name="first-name" value="">
+            </div>
+            <div class="form-group">
+              <label for="last-name">Last Name:</label>
+              <input class="input-field" type="text" id="last-name" name="last-name" value="">
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input class="input-field" type="email" id="email" name="email" value="">
+            </div>
+            <div class="form-group">
+              <label for="password">Password:</label>
+              <input class="input-field" type="password" id="password" name="password">
+            </div>
+          </div>
+            <div class="form-group form-action">
+              <input type="submit" value="Create">
+              <input type="reset" value="Cancel">
 
-
-                <div id="role-permission" class="tab-container">
-                    <h3>Role/Permission</h3>
-                  
-                    <div class="tab-links">
-                      <a href="#create-role-type">Create New Role Type</a>
-                      <a href="#view-role-types">View Role Types</a>
-                    </div>
-                  
-                    <div class="tab-content">
-                      <div id="create-role-type" class="tab-panel">
-                        <h4>Create New Role Type</h4>
-                        <form>
-                          <label for="new-role-type">New Role Type:</label>
-                          <input type="text" id="new-role-type" name="new-role-type" value="">
-                          <input type="submit" value="Save">
-                        </form>
-                  
-                        <table>
-                          <thead>
-                            <tr>
-                              <th>User</th>
-                              <th>Tax Payer</th>
-                              <th>Reports</th>
-                              <th>Stores</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td><input type="checkbox" id="user"></td>
-                              <td><input type="checkbox" id="tax-payer"></td>
-                              <td><input type="checkbox" id="reports"></td>
-                              <td><input type="checkbox" id="stores"></td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                  
-                      <div id="view-role-types" class="tab-panel">
-                        <h4>View Role Types</h4>
-                        <table>
-                          <thead>
-                            <tr>
-                              <th>Role Type</th>
-                              <th>Edit</th>
-                              <th>Delete</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>Admin</td>
-                              <td><a href="#">Edit</a></td>
-                              <td><a href="#">Delete</a></td>
-                            </tr>
-                            <tr>
-                              <td>Editor</td>
-                              <td><a href="#">Edit</a></td>
-                              <td><a href="#">Delete</a></td>
-                            </tr>
-                            <tr>
-                              <td>Viewer</td>
-                              <td><a href="#">Edit</a></td>
-                              <td><a href="#">Delete</a></td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-                  </div>
-                  
-
-            </main>
-            <footer>
-                <p class="footer-content">&copy; 2023 Ministry of Revenue and Customs, Government of Tonga. All rights
-                    reserved.
-                </p>
-            </footer>
+            </div>
+        
+          </form>
         </div>
 
+        <div id="view-users">
+          <h3>View User List</h3>
+          <form>
+            <div class="form-group">
+              <label for="user-search">Search:</label>
+              <input type="text" id="user-search" name="user-search" value="">
+            </div>
+            <div class="form-group">
+              <input type="submit" value="Search">
+            </div>
+          </form>
+          <table>
+            <thead>
+              <tr>
+                <th>User ID</th>
+                <th>Last Name</th>
+                <th>First Name</th>
+                <th>Role Type</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>001</td>
+                <td>Doe</td>
+                <td>John</td>
+                <td>Admin</td>
+              </tr>
+              <tr>
+                <td>002</td>
+                <td>Smith</td>
+                <td>Jane</td>
+                <td>Editor</td>
+              </tr>
+              <tr>
+                <td>003</td>
+                <td>Williams</td>
+                <td>Mark</td>
+                <td>Viewer</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+
+        <div id="role-permission" class="tab-container">
+          <h3>Role/Permission</h3>
+
+          <div class="tab-links">
+            <a href="#create-role-type">Create New Role Type</a>
+            <a href="#view-role-types">View Role Types</a>
+          </div>
+
+          <div class="tab-content">
+            <div id="create-role-type" class="tab-panel">
+              <h4>Create New Role Type</h4>
+              <form>
+                <label for="new-role-type">New Role Type:</label>
+                <input type="text" id="new-role-type" name="new-role-type" value="">
+                <input type="submit" value="Save">
+              </form>
+
+              <table>
+                <thead>
+                  <tr>
+                    <th>User</th>
+                    <th>Tax Payer</th>
+                    <th>Reports</th>
+                    <th>Stores</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><input type="checkbox" id="user"></td>
+                    <td><input type="checkbox" id="tax-payer"></td>
+                    <td><input type="checkbox" id="reports"></td>
+                    <td><input type="checkbox" id="stores"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div id="view-role-types" class="tab-panel">
+              <h4>View Role Types</h4>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Role Type</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Admin</td>
+                    <td><a href="#">Edit</a></td>
+                    <td><a href="#">Delete</a></td>
+                  </tr>
+                  <tr>
+                    <td>Editor</td>
+                    <td><a href="#">Edit</a></td>
+                    <td><a href="#">Delete</a></td>
+                  </tr>
+                  <tr>
+                    <td>Viewer</td>
+                    <td><a href="#">Edit</a></td>
+                    <td><a href="#">Delete</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+
+      </main>
+      <footer>
+        <p class="footer-content">&copy; 2023 Ministry of Revenue and Customs, Government of Tonga. All rights
+          reserved.
+        </p>
+      </footer>
     </div>
+
+  </div>
 </body>
 
 </html>
