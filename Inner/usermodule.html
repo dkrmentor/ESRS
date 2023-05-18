@@ -54,9 +54,9 @@
         </li>
       </ul>
     </sidebar>
-    
-    
-    
+
+
+
 
     <div class="right-bar">
 
@@ -73,65 +73,64 @@
 
       <main class="container usermodule">
         <div id="add-user">
-          <h3>Add New User</h3>
+          <h3 class="heading">Add New User</h3>
           <form>
             <div class="user-form">
-            <div class="form-group">
-              <label for="user-id">User ID:</label>
-              <input class="input-field" type="text" id="user-id" name="user-id" value="">
+              <div class="form-group">
+                <label for="user-id">User ID:</label>
+                <input class="input-field" type="text" id="user-id" name="user-id" value="" disabled>
+              </div>
+              <div class="form-group">
+                <label for="role-type">Role Type:</label>
+                <select id="role-type" name="role-type">
+                  <option value="admin">Admin</option>
+                  <option value="moderator">Moderator</option>
+                  <option value="viewer">Viewer</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="first-name">First Name:</label>
+                <input class="input-field" type="text" id="first-name" name="first-name" value="">
+              </div>
+              <div class="form-group">
+                <label for="last-name">Last Name:</label>
+                <input class="input-field" type="text" id="last-name" name="last-name" value="">
+              </div>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input class="input-field" type="email" id="email" name="email" value="">
+              </div>
+              <div class="form-group">
+                <label for="password">Password:</label>
+                <input class="input-field" type="password" id="password" name="password">
+              </div>
             </div>
-            <div class="form-group">
-              <label for="role-type">Role Type:</label>
-              <select id="role-type" name="role-type">
-                <option value="admin">Admin</option>
-                <option value="editor">Editor</option>
-                <option value="viewer">Viewer</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="first-name">First Name:</label>
-              <input class="input-field" type="text" id="first-name" name="first-name" value="">
-            </div>
-            <div class="form-group">
-              <label for="last-name">Last Name:</label>
-              <input class="input-field" type="text" id="last-name" name="last-name" value="">
-            </div>
-            <div class="form-group">
-              <label for="email">Email:</label>
-              <input class="input-field" type="email" id="email" name="email" value="">
-            </div>
-            <div class="form-group">
-              <label for="password">Password:</label>
-              <input class="input-field" type="password" id="password" name="password">
-            </div>
-          </div>
             <div class="form-group form-action">
               <input type="submit" value="Create">
               <input type="reset" value="Cancel">
 
             </div>
-        
+
           </form>
         </div>
 
         <div id="view-users">
-          <h3>View User List</h3>
+          <h3 class="heading">View User List</h3>
           <form>
             <div class="form-group">
-              <label for="user-search">Search:</label>
               <input type="text" id="user-search" name="user-search" value="">
             </div>
             <div class="form-group">
-              <input type="submit" value="Search">
+              <input type="submit" value="Search User">
             </div>
           </form>
           <table>
             <thead>
               <tr>
-                <th>User ID</th>
-                <th>Last Name</th>
-                <th>First Name</th>
-                <th>Role Type</th>
+                <td>User ID</td>
+                <td>Last Name</td>
+                <td>First Name</td>
+                <td>Role Type</td>
               </tr>
             </thead>
             <tbody>
@@ -145,7 +144,7 @@
                 <td>002</td>
                 <td>Smith</td>
                 <td>Jane</td>
-                <td>Editor</td>
+                <td>Moderator</td>
               </tr>
               <tr>
                 <td>003</td>
@@ -159,7 +158,7 @@
 
 
         <div id="role-permission" class="tab-container">
-          <h3>Role/Permission</h3>
+          <h3 class="heading">Role/Permission</h3>
 
           <div class="tab-links">
             <a href="#create-role-type">Create New Role Type</a>
@@ -167,7 +166,7 @@
           </div>
 
           <div class="tab-content">
-            <div id="create-role-type" class="tab-panel">
+            <div id="create-role-type" class="tab-panel1">
               <h4>Create New Role Type</h4>
               <form>
                 <label for="new-role-type">New Role Type:</label>
@@ -195,7 +194,7 @@
               </table>
             </div>
 
-            <div id="view-role-types" class="tab-panel">
+            <div id="view-role-types" class="tab-panel2">
               <h4>View Role Types</h4>
               <table>
                 <thead>
@@ -212,7 +211,7 @@
                     <td><a href="#">Delete</a></td>
                   </tr>
                   <tr>
-                    <td>Editor</td>
+                    <td>Moderator</td>
                     <td><a href="#">Edit</a></td>
                     <td><a href="#">Delete</a></td>
                   </tr>
