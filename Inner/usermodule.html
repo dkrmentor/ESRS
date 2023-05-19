@@ -157,51 +157,144 @@
         </div>
 
 
+        
         <div id="role-permission" class="tab-container">
-          <h3 class="heading">Role/Permission</h3>
-
+       
           <div class="tab-links">
-            <a href="#create-role-type">Create New Role Type</a>
-            <a href="#view-role-types">View Role Types</a>
+            <a href="#create-role-type" onclick="openTab(event, 'create-role-type')">Create New Role Type</a>
+            <a href="#view-role-types" onclick="openTab(event, 'view-role-types')">View Role Types</a>
           </div>
-
+        
           <div class="tab-content">
-            <div id="create-role-type" class="tab-panel1">
-              <h4>Create New Role Type</h4>
+            <div id="create-role-type" class="tab-panel1 active">
               <form>
-                <label for="new-role-type">New Role Type:</label>
-                <input type="text" id="new-role-type" name="new-role-type" value="">
-                <input type="submit" value="Save">
-              </form>
+                <div class="role-add">
+                  <label for="new-role-type">New Role Type:</label>
+                  <input type="text" id="new-role-type" name="new-role-type" value="">
+                  
+                  <input type="submit" value="Save">  </div>
+              
+                  <h4 class="heading">Permissions</h4>
 
-              <table>
-                <thead>
-                  <tr>
-                    <th>User</th>
-                    <th>Tax Payer</th>
-                    <th>Reports</th>
-                    <th>Stores</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><input type="checkbox" id="user"></td>
-                    <td><input type="checkbox" id="tax-payer"></td>
-                    <td><input type="checkbox" id="reports"></td>
-                    <td><input type="checkbox" id="stores"></td>
-                  </tr>
-                </tbody>
-              </table>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>User</th>
+                      <th>Tax Payer</th>
+                      <th>Reports</th>
+                      <th>Stores</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <label for="view-user-list">
+                          <input type="checkbox" id="view-user-list">
+                          View User List
+                        </label>
+                        <label for="edit-user">
+                          <input type="checkbox" id="edit-user">
+                          Edit User
+                        </label>
+                        <label for="create-user">
+                          <input type="checkbox" id="create-user">
+                          Create User
+                        </label>
+                        <label for="disable-print">
+                          <input type="checkbox" id="disable-print">
+                          Disable Print
+                        </label>
+                        <label for="disable-export">
+                          <input type="checkbox" id="disable-export">
+                          Disable Export
+                        </label>
+                      </td>
+                      <td>
+                        <label for="create-tax-payer">
+                          <input type="checkbox" id="create-tax-payer">
+                          Create Tax Payer
+                        </label>
+                        <label for="view-tax-payer">
+                          <input type="checkbox" id="view-tax-payer">
+                          View Tax Payer
+                        </label>
+                        <label for="edit-tax-payer">
+                          <input type="checkbox" id="edit-tax-payer">
+                          Edit Tax Payer
+                        </label>
+                        <label for="delete-tax-payer">
+                          <input type="checkbox" id="delete-tax-payer">
+                          Delete Tax Payer
+                        </label>
+                        <label for="disable-print-tax-payer">
+                          <input type="checkbox" id="disable-print-tax-payer">
+                          Disable Print
+                        </label>
+                        <label for="disable-export-tax-payer">
+                          <input type="checkbox" id="disable-export-tax-payer">
+                          Disable Export
+                        </label>
+                      </td>
+                      <td>
+                        <label for="view-sale-report">
+                          <input type="checkbox" id="view-sale-report">
+                          View Sale Report
+                        </label>
+                        <label for="view-user-activity-log">
+                          <input type="checkbox" id="view-user-activity-log">
+                          View User Activity Log
+                        </label>
+                        <label for="disable-print-report">
+                          <input type="checkbox" id="disable-print-report">
+                          Disable Print
+                        </label>
+                        <label for="disable-export-report">
+                          <input type="checkbox" id="disable-export-report">
+                          Disable Export
+                        </label>
+                      </td>
+                      <td>
+                        <label for="create-store">
+                          <input type="checkbox" id="create-store">
+                          Create Store
+                        </label>
+                        <label for="view-store-list">
+                          <input type="checkbox" id="view-store-list">
+                          View Store List
+                        </label>
+                        <label for="edit-store">
+                          <input type="checkbox" id="edit-store">
+                          Edit Store
+                        </label>
+                        <label for="delete-store">
+                          <input type="checkbox" id="delete-store">
+                          Delete Store
+                        </label>
+                        <label for="disable-print-store">
+                          <input type="checkbox" id="disable-print-store">
+                          Disable Print
+                        </label>
+                        <label for="disable-export-store">
+                          <input type="checkbox" id="disable-export-store">
+                          Disable Export
+                        </label>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                
+                
+            </form>
             </div>
-
+        
             <div id="view-role-types" class="tab-panel2">
-              <h4>View Role Types</h4>
+              <div class="role-types">
               <table>
                 <thead>
                   <tr>
-                    <th>Role Type</th>
-                    <th>Edit</th>
-                    <th>Delete</th>
+                    <th>Role Types</th>
+                    <th colspan="2">Action</th>
+
                   </tr>
                 </thead>
                 <tbody>
@@ -223,9 +316,12 @@
                 </tbody>
               </table>
             </div>
+            </div>
           </div>
         </div>
+        
 
+        
 
       </main>
       <footer>
@@ -236,6 +332,21 @@
     </div>
 
   </div>
+  <script>
+    const openTab = (event, tabId) => {
+      event.preventDefault();
+  
+      // Hide all tab panels
+      const tabPanels = document.querySelectorAll('.tab-content > div');
+      tabPanels.forEach(panel => {
+        panel.classList.remove('active');
+      });
+  
+      // Show the selected tab panel
+      const selectedTabPanel = document.getElementById(tabId);
+      selectedTabPanel.classList.add('active');
+    }
+  </script>
 </body>
 
 </html>
