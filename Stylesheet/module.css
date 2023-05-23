@@ -789,3 +789,46 @@
     display: flex;
     justify-content: flex-end;
 }
+/* /////////////////////tp-detail */
+#tp-contacts .row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+
+#tp-contacts .email-col,
+#tp-contacts .person-col {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#tp-contacts .row label {
+    width: 140px;
+}
+
+#tp-contacts .buttons {
+    margin-top: 22px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* /////////////////////view tax payer-detail */
+  
+
+  
+  #view-tax-payer table thead td {
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  #view-tax-payer table td {
+    padding: 8px;
+    border: 2px solid #e2e2e2;
+  }
+  
+  #view-tax-payer table {
+    background-color: #ababab;
+  }
+  

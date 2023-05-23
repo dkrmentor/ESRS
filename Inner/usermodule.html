@@ -214,8 +214,8 @@
                             <input type="checkbox" id="create-tax-payer">
                             Create Tax Payer
                           </label>
-                          <label for="view-tax-payer">
-                            <input type="checkbox" id="view-tax-payer">
+                          <label for="view-tx-payer">
+                            <input type="checkbox" id="view-tx-payer">
                             View Tax Payer
                           </label>
                           <label for="edit-tax-payer">
@@ -345,7 +345,7 @@
                     <label for="organization-type">Organization Type:</label>
                     <input type="text" id="organization-type">
                   </div>
-                  
+
                   <h4 class="heading">Names</h4>
                   <div class="row">
                     <div class="checkbox-row">
@@ -367,14 +367,14 @@
                     <label for="trade-name">Trade Name:</label>
                     <input type="text" id="trade-name">
                   </div>
-              
+
                   <div class="buttons">
                     <button id="saveButton">Save</button>
                     <button id="cancelButton">Cancel</button>
                   </div>
                 </form>
               </div>
-              
+
 
               <div id="tp-details" class="tab-panel ">
                 <form>
@@ -458,17 +458,179 @@
               </div>
 
               <div id="tp-contacts" class="tab-panel">
+                <form>
+
+
+                  <h4 class="heading">Email Types</h4>
+                  <div class="row">
+                    <!-- <label>Phone Types:</label> -->
+                    <div class="email-col">
+                      <input type="checkbox" id="primary"><label for="primary">Primary</label>
+                      <input type="checkbox" id="secondary"><label for="secondary">Secondary</label>
+
+                    </div>
+                  </div>
+                  <h4 class="heading">Person In Charge</h4>
+                  <div class="row">
+                    <div class="person-col">
+
+                      <label for="first-name">First Name:</label>
+                      <input type="text" id="first-name">
+
+                    </div>
+                    <div class="person-col">
+
+                      <label for="last-name">Last Name:</label>
+                      <input type="text" id="last-name">
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="person-col">
+                      <label for="landline">Landline:</label>
+                      <input type="text" id="landline">
+                    </div>
+                    <div class="person-col">
+                      <label for="mobile">Mobile:</label>
+                      <input type="text" id="mobile">
+                    </div>
+                  </div>
+
+
+                  <div class="row">
+                    <div class="person-col">
+                      <label for="email">Email Address:</label>
+                      <input type="text" id="email">
+                    </div>
+
+                  </div>
+
+                  <div class="buttons">
+                    <button id="saveButton">Save</button>
+                    <button id="cancelButton">Cancel</button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
+          <div id="view-tax-payer">
+            <h3 class="heading">Tax Payer List</h3>
+            <form>
+              <div class="form-group">
+                <input type="text" id="tax-payer-search" name="tax-payer-search" value="">
+                <input type="submit" value="Search Tax Payer">
+              </div>
+            </form>
+            <div>
+              <p>Total No. of taxpayers: <input type="text" id="total-taxpayers" name="total-taxpayers"></p>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <td>TIN Number</td>
+                  <td>Registered Name</td>
+                  <td>Trade Name</td>
+                  <td>Organization Type</td>
+                  <td colspan="2">Comments</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td onclick="showUserInfo(this)">001</td>
+                  <td>Dummy Company 1</td>
+                  <td>Trade Name 1</td>
+                  <td>Organization Type 1</td>
+                  <td colspan="2">
+                    <button>New</button>
+                    <button>View</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td onclick="showUserInfo(this)">002</td>
+                  <td>Dummy Company 2</td>
+                  <td>Trade Name 2</td>
+                  <td>Organization Type 2</td>
+                  <td colspan="2">
+                    <button>New</button>
+                    <button>View</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td onclick="showUserInfo(this)">003</td>
+                  <td>Dummy Company 3</td>
+                  <td>Trade Name 3</td>
+                  <td>Organization Type 3</td>
+                  <td colspan="2">
+                    <button>New</button>
+                    <button>View</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+          <script>
+            const showUserInfo = (element) => {
+              const tin = element.textContent;
+              const userInfo = getUserInfo(tin); // Replace with your logic to fetch user info
+              
+              const viewTaxPayerDiv = document.getElementById('view-tax-payer');
+              viewTaxPayerDiv.innerHTML = userInfo;
+            };
+          
+            const getUserInfo = (tin) => {
+              // Replace with your logic to fetch user info based on the TIN number
+              return `
+                <div id="user-info">
+                  <h3>Tax Payer Details</h3>
+                  <p>Tax Number: ${tin}</p>
+                  <p>Owner Name: John Doe</p>
+                  <p>Owner Address: 123 Main St, City</p>
+                  <p>Phone Number: 123-456-7890</p>
+                  <p>Email: john.doe@example.com</p>
+                </div>
+                <table>
+                  <thead>
+                    <tr>
+                      <td>Company</td>
+                      <td>Trading Business</td>
+                      <td>Business Type</td>
+                      <td colspan="2">Status</td>
+                      <td>Date</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Dummy Company</td>
+                      <td>Trade Business 1</td>
+                      <td>Business Type 1</td>
+                      <td colspan="2">Registered</td>
+                      <td>2023-05-24</td>
+                    </tr>
+                    <tr>
+                      <td>Another Company</td>
+                      <td>Trade Business 2</td>
+                      <td>Business Type 2</td>
+                      <td colspan="2">Non-Registered</td>
+                      <td>2023-05-25</td>
+                    </tr>
+                  </tbody>
+                </table>
+              `;
+            };
+          </script>
+          
+          
+          
         </div>
-      </main>
-      <footer>
-        <p class="footer-content">&copy; 2023 Ministry of Revenue and Customs, Government of Tonga. All rights
-          reserved.
-        </p>
-      </footer>
-    </div>
+   
+    </main>
+    <footer>
+      <p class="footer-content">&copy; 2023 Ministry of Revenue and Customs, Government of Tonga. All rights
+        reserved.
+      </p>
+    </footer>
+  </div>
 
   </div>
   <script>
