@@ -9,8 +9,7 @@
     align-items: stretch;
     justify-content: space-between;
     min-height: 100vh;
-    width: 90vw;
-    max-width: 680px;
+
     margin: 0 auto;
 }
 
@@ -311,336 +310,6 @@
     padding: 20px 5px;
     border: 2px solid #b8b8b898;
 }
-
-
-
-
-
-
-/*   
-  /////////////////////////////////////////////////////////////////////
-  /////////////////////////////////////////////////////////////////////
-   user module end
-   /////////////////////////////////////////////////////////////////////
-   ///////////////////////////////////////////////////////////////////// */
-
-
-.module-page {
-    display: flex;
-    min-height: 100vh;
-}
-
-.right-bar {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: space-between;
-    min-height: 100vh;
-    width: 90vw;
-    max-width: 680px;
-    margin: 0 auto;
-}
-
-
-/* ///////////////////////////////////Sidebar */
-
-.sidebar {
-    background-color: #000080;
-    padding: 20px 5px;
-}
-
-.container .menu {
-    color: white;
-    padding: 10px;
-}
-
-.container .submenu,
-.container .submenu-items {
-    list-style-type: none;
-    padding: 0;
-    width: 200px;
-    color: white;
-}
-
-.container .submenu-items {
-    background: #0000c0;
-}
-
-.container .submenu-items li {
-    border: 1px solid white;
-
-}
-
-.container .submenu>li>.toggle-menu {
-    display: none;
-}
-
-.container .submenu>li>label {
-    display: block;
-    padding: 10px;
-    cursor: pointer;
-}
-
-.container .submenu>li>.submenu-items {
-    display: none;
-}
-
-.container .submenu>li>.toggle-menu:checked~.submenu-items {
-    display: block;
-}
-
-.container .submenu>li>.submenu-items li a {
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-    color: white;
-}
-
-.container .submenu>li>label::after {
-    content: "\25BA";
-    float: right;
-    margin-left: 5px;
-    transform: rotate(0deg);
-    transition: transform 0.2s;
-}
-
-.container .submenu>li>.toggle-menu:checked~label::after {
-    transform: rotate(90deg);
-}
-
-.container>div {
-    display: none;
-}
-
-.container>div:target {
-    display: block;
-}
-
-
-
-
-/* ////////////////////////////usermodule */
-
-.usermodule .heading {
-    text-decoration: underline;
-}
-
-
-/* ////////////////////////////adduser */
-
-#add-user .user-form {
-
-    background-color: #f0f0f0;
-    margin: 30px auto;
-
-}
-
-
-#add-user label {
-    display: block;
-    text-align: left;
-    font-size: 1.2em;
-    line-height: 1.2;
-    width: 30%;
-
-}
-
-#add-user input {
-    font-size: 1.2em;
-    line-height: 1.5;
-}
-
-#add-user .form-group {
-    display: flex;
-
-}
-
-#add-user .form-group>label,
-#add-user .form-group>input,
-#add-user .form-group>select {
-    border: 1px solid #d2d2d2;
-    padding: 8px;
-}
-
-#add-user .input-field,
-#add-user select {
-    width: 65%;
-}
-
-#add-user #add-user-btn {
-    text-align: center;
-}
-
-#add-user .form-group.form-action {
-    display: flex;
-    justify-content: space-around;
-    width: 60%;
-    margin: 0 auto;
-}
-
-
-@media screen and (max-width: 600px) {
-
-    #add-user form {
-        margin-top: 20px;
-    }
-
-    #add-user label {
-        font-size: 1.1em;
-        line-height: 1.2;
-    }
-
-    #add-user input {
-        font-size: 1.1em;
-        line-height: 1.5;
-    }
-
-    #add-user button[type="submit"] {
-        font-size: 1.1em;
-        line-height: 1.5;
-    }
-}
-
-
-/* ////////////////////////view-users */
-
-#view-users form {
-    display: flex;
-}
-
-#view-users input {
-    border: none;
-    cursor: pointer;
-    padding: 5px 15px;
-    border: 2px solid #ababab;
-    margin: 2px;
-
-
-
-}
-
-#view-users input[type="submit"] {
-    background-color: #e1e1e1;
-    color: black;
-    border: none;
-    cursor: pointer;
-    padding: 5px 30px;
-    margin: 2px;
-    border: 2px solid #ababab;
-    font-weight: bold;
-
-
-
-}
-
-#view-users table {
-    width: 100%;
-}
-
-#view-users table thead td {
-    font-weight: bold;
-    text-align: center;
-}
-
-#view-users table td {
-    padding: 8px;
-    border: 2px solid #e2e2e2;
-}
-
-#view-users table {
-    background-color: #ababab;
-}
-
-
-/* ////////////////////////role-permission */
-
-#role-permission .tab-content {
-    height: 22vw;
-    background-color: #d3d3d3;
-    padding: 20px 5px;
-    border: 2px solid #b8b8b898;
-}
-
-#role-permission .tab-links a {
-    display: inline-block;
-    padding: 5px 10px;
-    background-color: #ccc;
-    color: #333;
-    text-decoration: none;
-    border-radius: 5px 5px 0 0;
-}
-
-#role-permission .tab-links a:hover {
-    background-color: #999;
-    color: #fff;
-}
-
-#role-permission .tab-panel1,
-#role-permission .tab-panel2 {
-    display: none;
-}
-
-#role-permission .tab-panel1.active,
-#role-permission .tab-panel2.active {
-    display: block;
-}
-
-
-#role-permission table {
-    width: 100%;
-    margin-bottom: 10px;
-    border-collapse: collapse;
-}
-
-#role-permission table th,
-#role-permission table td {
-    padding: 5px;
-    text-align: left;
-    vertical-align: top;
-}
-
-#role-permission table td a {
-    text-decoration: none;
-    color: #333;
-}
-
-#role-permission table td a:hover {
-    text-decoration: underline;
-}
-
-/* Define the spacing between the checkboxes and labels */
-#role-permission td label {
-    margin-bottom: 10px;
-    /* Adjust the value as per your preference */
-    display: flex;
-    align-items: center;
-    padding: 5px 0px;
-}
-
-
-/* Style the checkboxes */
-#role-permission td input[type="checkbox"] {
-    margin-right: 5px;
-    /* Adjust the value as per your preference */
-}
-
-#role-permission .role-add {
-    display: flex;
-    justify-content: space-around;
-}
-
-#role-permission input#new-role-type {
-    width: 50%;
-}
-
-
-#view-role-types .role-types tbody {
-    padding: 20px 5px;
-    border: 2px solid #b8b8b898;
-}
-
-
-
 
 
 
@@ -789,6 +458,7 @@
     display: flex;
     justify-content: flex-end;
 }
+
 /* /////////////////////tp-detail */
 #tp-contacts .row {
     display: flex;
@@ -815,20 +485,138 @@
 }
 
 /* /////////////////////view tax payer-detail */
-  
 
-  
-  #view-tax-payer table thead td {
+#view-tax-payer .form-group {
+    display: flex;
+    justify-content: center;
+}
+
+#view-tax-payer table thead td {
     font-weight: bold;
     text-align: center;
-  }
-  
-  #view-tax-payer table td {
+
+}
+
+#view-tax-payer table td {
+    padding: 20px 5px;
+    background: #f0f0f0;
+
+}
+
+#view-tax-payer table {
+    background-color: #ced0d2;
+}
+
+/* /////////////////////view tax payer-detail - user-info */
+
+#user-info {
+    background: #f0f0f0;
+    width: 35vw;
+    margin: 40px auto;
+}
+
+#user-info .user-details {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-around;
+}
+
+/* /* /////////////////////register-store */
+#register-store .store-form {
+    background-color: #f0f0f0;
+    margin: 30px auto;
+}
+
+#register-store label {
+    display: block;
+    text-align: left;
+    font-size: 1.2em;
+    line-height: 1.2;
+    width: 30%;
+}
+
+#register-store input {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+#register-store .form-group {
+    display: flex;
+}
+
+#register-store .form-group>label,
+#register-store .form-group>input {
+    border: 1px solid #d2d2d2;
     padding: 8px;
-    border: 2px solid #e2e2e2;
-  }
-  
-  #view-tax-payer table {
-    background-color: #ababab;
-  }
-  
+}
+
+#register-store .input-field {
+    width: 65%;
+}
+
+#register-store .form-group.form-action {
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+    #register-store form {
+        margin-top: 20px;
+    }
+
+    #register-store label {
+        font-size: 1.1em;
+        line-height: 1.2;
+    }
+
+    #register-store input {
+        font-size: 1.1em;
+        line-height: 1.5;
+    }
+
+    #register-store button[type="submit"] {
+        font-size: 1.1em;
+        line-height: 1.5;
+    }
+}
+
+
+
+/* Styles for the Store List */
+
+
+#view-store table thead td {
+    font-weight: bold;
+    text-align: center;
+}
+
+#view-store table td {
+    padding: 20px 5px;
+    background: #f0f0f0;
+}
+
+#view-store table {
+    background-color: #ced0d2;
+}
+
+/* Styles for the Store Details */
+
+
+
+#store-info table thead td {
+    font-weight: bold;
+    text-align: center;
+}
+
+#store-info table td {
+    padding: 10px 5px;
+    background: #f0f0f0;
+}
+
+#store-info table {
+    background-color: #ced0d2;
+    width: 100%;
+}
