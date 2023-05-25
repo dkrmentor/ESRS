@@ -324,9 +324,6 @@
 /* ////////////////////////// taxpayer module*/
 
 
-/* Global Styles */
-
-
 
 
 .taxpayer .tab-links a {
@@ -522,6 +519,14 @@
     justify-content: space-around;
 }
 
+/*   
+  /////////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////////////////
+   tax payer end
+   /////////////////////////////////////////////////////////////////////
+   ///////////////////////////////////////////////////////////////////// */
+
+
 /* /* /////////////////////register-store */
 #register-store .store-form {
     background-color: #f0f0f0;
@@ -620,3 +625,119 @@
     background-color: #ced0d2;
     width: 100%;
 }
+
+
+
+/* Styles for the Sales Report */
+
+#sales-report .heading {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+  
+  #sales-report .report-form {
+    margin-bottom: 20px;
+  }
+
+  #sales-report .form-group {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+  }
+  
+  #sales-report .column {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #sales-report label {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+  }
+  
+  #sales-report .dropdown-menu {
+    font-size: 1.2em;
+    padding: 5px;
+    border: 1px solid #d2d2d2;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  #sales-report .calendar-dropdown {
+    font-size: 1.2em;
+    padding: 5px;
+    border: 1px solid #d2d2d2;
+    margin-bottom: 10px;
+  }
+  
+  #sales-report .form-action {
+  
+    align-items: center;
+  }
+   #sales-report  .report-form {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f0f0f0;
+    padding: 10px;
+
+}
+
+ #sales-report  .inner-column {
+    display:flex;
+}
+  #sales-report .form-action button {
+    font-size: 1.2em;
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+
+  
+  #sales-report table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  #sales-report table thead td {
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  #sales-report table td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #d2d2d2;
+    background-color: #f0f0f0;
+    cursor: pointer;
+  }
+  
+  /* Styles for the Receipt Info */
+  
+  #receipt-info .heading {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+  
+  #receipt-info table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  #receipt-info table thead td {
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  #receipt-info table td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #d2d2d2;
+    background-color: #f0f0f0;
+  }
+  

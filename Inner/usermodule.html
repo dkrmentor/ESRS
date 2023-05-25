@@ -38,7 +38,7 @@
           <input type="checkbox" id="toggle-reports" class="toggle-menu">
           <label for="toggle-reports">Reports</label>
           <ul class="submenu-items">
-            <li><a href="#sale-report">Sales Report</a></li>
+            <li><a href="#sales-report">Sales Report</a></li>
             <li><a href="#exp-report">Expenses Report</a></li>
             <li><a href="#inventory-report">Inventory Report</a></li>
             <li><a href="#act-report">User Activity Report</a></li>
@@ -573,6 +573,112 @@
 
 
         </div>
+
+        <div class="container sales-report">
+          <div id="sales-report">
+            <h3 class="heading">Sales Report</h3>
+            <div class="report-form">
+              <div class="form-col-section">
+              <div class="form-group">
+                <div class="column">
+                  <div class="inner-column">
+                    <label for="tax-payer">Tax Payer:</label>
+                    <select class="dropdown-menu" id="tax-payer">
+                      <option value="tax-payer-1">Tax Payer 1</option>
+                      <option value="tax-payer-2">Tax Payer 2</option>
+                      <option value="tax-payer-3">Tax Payer 3</option>
+                    </select>
+                  </div>
+                  <div class="inner-column">
+                    <label for="store">Store:</label>
+                    <select class="dropdown-menu" id="store">
+                      <option value="store-1">Store 1</option>
+                      <option value="store-2">Store 2</option>
+                      <option value="store-3">Store 3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="column">
+                  <div class="inner-column">
+
+                  <label for="ct-type">CT Type:</label>
+                  <select class="dropdown-menu" id="ct-type">
+                    <option value="ct-type-1">CT Type 1</option>
+                    <option value="ct-type-2">CT Type 2</option>
+                    <option value="ct-type-3">CT Type 3</option>
+                  </select>
+                  </div>
+                  <div class="inner-column">
+
+                  <label for="country">Country:</label>
+                  <select class="dropdown-menu" id="country">
+                    <option value="country-1">Country 1</option>
+                    <option value="country-2">Country 2</option>
+                    <option value="country-3">Country 3</option>
+                  </select>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="date-from">Date Range From:</label>
+                <input class="calendar-dropdown" type="date" id="date-from" name="date-from">
+                <label for="date-to">Date Range To:</label>
+                <input class="calendar-dropdown" type="date" id="date-to" name="date-to">
+              </div>
+            </div>
+              <div class="form-group form-action">
+                <button type="button" onclick="viewSalesReport()">View</button>
+                <button type="button" onclick="clearSalesReport()">Clear</button>
+              </div>
+            </div>
+
+        
+              <table>
+                <thead>
+                  <tr>
+                    <td>Serial Number</td>
+                    <td>Date</td>
+                    <td>Time Stamp</td>
+                    <td>Form of Payments</td>
+                    <td>Customer Number</td>
+                    <td>Customer TIN</td>
+                    <td>Reference Number</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>2023-05-01</td>
+                    <td>10:30 AM</td>
+                    <td>Cash</td>
+                    <td>12345</td>
+                    <td>ABC123</td>
+                    <td onclick="showReceiptInfo(this)">REF001</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>2023-05-02</td>
+                    <td>11:45 AM</td>
+                    <td>Credit Card</td>
+                    <td>67890</td>
+                    <td>DEF456</td>
+                    <td onclick="showReceiptInfo(this)">REF002</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>2023-05-03</td>
+                    <td>02:15 PM</td>
+                    <td>Debit Card</td>
+                    <td>54321</td>
+                    <td>GHI789</td>
+                    <td onclick="showReceiptInfo(this)">REF003</td>
+                  </tr>
+                </tbody>
+              </table>
+      
+          </div>
+        </div>
+
         <div class="container store">
           <div id="register-store">
             <h3 class="heading">Register New Store</h3>
@@ -668,6 +774,7 @@
 
 
         </div>
+
       </main>
       <footer>
         <p class="footer-content">&copy; 2023 Ministry of Revenue and Customs, Government of Tonga. All rights
@@ -693,7 +800,7 @@
       selectedTabPanel.classList.add('active');
     }
   </script>
-  <!-- /////view-tax-payer -->
+  <!-- /////tax-payer Info -->
 
   <script>
     const showUserInfo = (element) => {
@@ -769,10 +876,67 @@
   </script>
 
 
+  <!-- /////recept Info -->
+
+  <script>
+    const showReceiptInfo = (element) => {
+      const referenceNumber = element.textContent;
+      const receiptInfo = getReceiptInfo(referenceNumber); // Replace with your logic to fetch receipt info
+
+      const viewReceiptDiv = document.getElementById('sales-report');
+      viewReceiptDiv.innerHTML = receiptInfo;
+    };
+
+    const getReceiptInfo = (referenceNumber) => {
+      // Replace with your logic to fetch receipt info based on the reference number
+      return `
+    <div id="receipt-info">
+        <h3>Receipt Details</h3>
+        <div class="receipt-details">
+          <p>Reference Number: ${referenceNumber}</p>
+        </div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <td>Receipt Number</td>
+            <td>Date</td>
+            <td>Time Stamp</td>
+            <td>Amount</td>
+            <td>Payment Method</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Receipt 001</td>
+            <td>2023-05-01</td>
+            <td>10:30 AM</td>
+            <td>$100</td>
+            <td>Cash</td>
+          </tr>
+          <tr>
+            <td>Receipt 002</td>
+            <td>2023-05-02</td>
+            <td>11:45 AM</td>
+            <td>$200</td>
+            <td>Credit Card</td>
+          </tr>
+          <tr>
+            <td>Receipt 003</td>
+            <td>2023-05-03</td>
+            <td>02:15 PM</td>
+            <td>$150</td>
+            <td>Debit Card</td>
+          </tr>
+        </tbody>
+      </table>
+    `;
+    };
+  </script>
 
 
 
-  <!-- /////store list -->
+  <!-- /////store Info -->
 
 
   <script>
@@ -839,6 +1003,10 @@
     `;
     };
   </script>
+
+
+
+
 
 </body>
 
