@@ -41,7 +41,7 @@
             <li><a href="#sales-report">Sales Report</a></li>
             <li><a href="#exp-report">Expenses Report</a></li>
             <li><a href="#inventory-report">Inventory Report</a></li>
-            <li><a href="#act-report">User Activity Report</a></li>
+            <li><a href="#user-activity-report">User Activity Report</a></li>
           </ul>
         </li>
         <li>
@@ -579,104 +579,362 @@
             <h3 class="heading">Sales Report</h3>
             <div class="report-form">
               <div class="form-col-section">
-              <div class="form-group">
-                <div class="column">
-                  <div class="inner-column">
-                    <label for="tax-payer">Tax Payer:</label>
-                    <select class="dropdown-menu" id="tax-payer">
-                      <option value="tax-payer-1">Tax Payer 1</option>
-                      <option value="tax-payer-2">Tax Payer 2</option>
-                      <option value="tax-payer-3">Tax Payer 3</option>
-                    </select>
+                <div class="form-group">
+                  <div class="column">
+                    <div class="inner-column">
+                      <label for="tax-payer">Tax Payer:</label>
+                      <select class="dropdown-menu" id="tax-payer">
+                        <option value="tax-payer-1">Tax Payer 1</option>
+                        <option value="tax-payer-2">Tax Payer 2</option>
+                        <option value="tax-payer-3">Tax Payer 3</option>
+                      </select>
+                    </div>
+                    <div class="inner-column">
+                      <label for="store">Store:</label>
+                      <select class="dropdown-menu" id="store">
+                        <option value="store-1">Store 1</option>
+                        <option value="store-2">Store 2</option>
+                        <option value="store-3">Store 3</option>
+                      </select>
+                    </div>
                   </div>
-                  <div class="inner-column">
-                    <label for="store">Store:</label>
-                    <select class="dropdown-menu" id="store">
-                      <option value="store-1">Store 1</option>
-                      <option value="store-2">Store 2</option>
-                      <option value="store-3">Store 3</option>
-                    </select>
+                  <div class="column">
+                    <div class="inner-column">
+
+                      <label for="ct-type">CT Type:</label>
+                      <select class="dropdown-menu" id="ct-type">
+                        <option value="ct-type-1">CT Type 1</option>
+                        <option value="ct-type-2">CT Type 2</option>
+                        <option value="ct-type-3">CT Type 3</option>
+                      </select>
+                    </div>
+                    <div class="inner-column">
+
+                      <label for="country">Country:</label>
+                      <select class="dropdown-menu" id="country">
+                        <option value="country-1">Country 1</option>
+                        <option value="country-2">Country 2</option>
+                        <option value="country-3">Country 3</option>
+                      </select>
+                    </div>
                   </div>
                 </div>
-                <div class="column">
-                  <div class="inner-column">
-
-                  <label for="ct-type">CT Type:</label>
-                  <select class="dropdown-menu" id="ct-type">
-                    <option value="ct-type-1">CT Type 1</option>
-                    <option value="ct-type-2">CT Type 2</option>
-                    <option value="ct-type-3">CT Type 3</option>
-                  </select>
-                  </div>
-                  <div class="inner-column">
-
-                  <label for="country">Country:</label>
-                  <select class="dropdown-menu" id="country">
-                    <option value="country-1">Country 1</option>
-                    <option value="country-2">Country 2</option>
-                    <option value="country-3">Country 3</option>
-                  </select>
-                  </div>
+                <div class="form-group">
+                  <label for="date-from">Date Range From:</label>
+                  <input class="calendar-dropdown" type="date" id="date-from" name="date-from">
+                  <label for="date-to">Date Range To:</label>
+                  <input class="calendar-dropdown" type="date" id="date-to" name="date-to">
                 </div>
               </div>
-              <div class="form-group">
-                <label for="date-from">Date Range From:</label>
-                <input class="calendar-dropdown" type="date" id="date-from" name="date-from">
-                <label for="date-to">Date Range To:</label>
-                <input class="calendar-dropdown" type="date" id="date-to" name="date-to">
-              </div>
-            </div>
               <div class="form-group form-action">
                 <button type="button" onclick="viewSalesReport()">View</button>
                 <button type="button" onclick="clearSalesReport()">Clear</button>
               </div>
             </div>
 
-        
-              <table>
-                <thead>
-                  <tr>
-                    <td>Serial Number</td>
-                    <td>Date</td>
-                    <td>Time Stamp</td>
-                    <td>Form of Payments</td>
-                    <td>Customer Number</td>
-                    <td>Customer TIN</td>
-                    <td>Reference Number</td>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>2023-05-01</td>
-                    <td>10:30 AM</td>
-                    <td>Cash</td>
-                    <td>12345</td>
-                    <td>ABC123</td>
-                    <td onclick="showReceiptInfo(this)">REF001</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>2023-05-02</td>
-                    <td>11:45 AM</td>
-                    <td>Credit Card</td>
-                    <td>67890</td>
-                    <td>DEF456</td>
-                    <td onclick="showReceiptInfo(this)">REF002</td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>2023-05-03</td>
-                    <td>02:15 PM</td>
-                    <td>Debit Card</td>
-                    <td>54321</td>
-                    <td>GHI789</td>
-                    <td onclick="showReceiptInfo(this)">REF003</td>
-                  </tr>
-                </tbody>
-              </table>
-      
+
+            <table>
+              <thead>
+                <tr>
+                  <td>Serial Number</td>
+                  <td>Date</td>
+                  <td>Time Stamp</td>
+                  <td>Form of Payments</td>
+                  <td>Customer Number</td>
+                  <td>Customer TIN</td>
+                  <td>Reference Number</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>2023-05-01</td>
+                  <td>10:30 AM</td>
+                  <td>Cash</td>
+                  <td>12345</td>
+                  <td>ABC123</td>
+                  <td onclick="showReceiptInfo(this)">REF001</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>2023-05-02</td>
+                  <td>11:45 AM</td>
+                  <td>Credit Card</td>
+                  <td>67890</td>
+                  <td>DEF456</td>
+                  <td onclick="showReceiptInfo(this)">REF002</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>2023-05-03</td>
+                  <td>02:15 PM</td>
+                  <td>Debit Card</td>
+                  <td>54321</td>
+                  <td>GHI789</td>
+                  <td onclick="showReceiptInfo(this)">REF003</td>
+                </tr>
+              </tbody>
+            </table>
+
           </div>
+
+          <div id="exp-report" class="tab-container">
+            <div class="tab-links">
+              <a href="#create-new-expense" onclick="openTab(event, 'create-new-expense')">Create New Expense</a>
+              <a href="#view-expense-list" onclick="openTab(event, 'view-expense-list')">View Expense List</a>
+            </div>
+
+            <div class="tab-content">
+              <div id="create-new-expense" class="tab-panel active">
+                <form>
+                  <div class="expense-form">
+                    <div class="form-group">
+                      <label for="expense-id">Expense ID:</label>
+                      <input class="input-field" type="text" id="expense-id" name="expense-id" value="" disabled>
+                    </div>
+                    <div class="form-group">
+                      <label for="expense-date">Expense Date:</label>
+                      <input class="input-field" type="date" id="expense-date" name="expense-date" value="">
+                    </div>
+                    <div class="form-group">
+                      <label for="expense-category">Expense Category:</label>
+                      <select id="expense-category" name="expense-category">
+                        <option value="category-1">Category 1</option>
+                        <option value="category-2">Category 2</option>
+                        <option value="category-3">Category 3</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="expense-amount">Expense Amount:</label>
+                      <input class="input-field" type="text" id="expense-amount" name="expense-amount" value="">
+                    </div>
+                    <div class="form-group">
+                      <label for="expense-description">Expense Description:</label>
+                      <textarea class="input-field" id="expense-description" name="expense-description"></textarea>
+                    </div>
+                  </div>
+                  <div class="form-group form-action">
+                    <input type="submit" value="Create">
+                    <input type="reset" value="Cancel">
+                  </div>
+                </form>
+              </div>
+
+
+              <div id="view-expense-list" class="tab-panel">
+                <h3 class="heading">View Expense List</h3>
+                <table>
+                  <thead>
+                    <tr>
+                      <td>Expense ID</td>
+                      <td>Date</td>
+                      <td>Category</td>
+                      <td>Amount</td>
+                      <td>Description</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>2023-05-01</td>
+                      <td>Category 1</td>
+                      <td>$100.00</td>
+                      <td>Expense 1 Description</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>2023-05-02</td>
+                      <td>Category 2</td>
+                      <td>$50.00</td>
+                      <td>Expense 2 Description</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>2023-05-03</td>
+                      <td>Category 1</td>
+                      <td>$75.00</td>
+                      <td>Expense 3 Description</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+
+          <div id="inventory-report">
+            <h3 class="heading">Inventory Report</h3>
+            <div class="report-form">
+              <div class="form-col-section">
+                <div class="form-group">
+                  <div class="column">
+                    <div class="inner-column">
+                      <label for="tax-payer">Tax Payer:</label>
+                      <select class="dropdown-menu" id="tax-payer">
+                        <option value="tax-payer-1">Tax Payer 1</option>
+                        <option value="tax-payer-2">Tax Payer 2</option>
+                        <option value="tax-payer-3">Tax Payer 3</option>
+                      </select>
+                    </div>
+                    <div class="inner-column">
+                      <label for="store">Store:</label>
+                      <select class="dropdown-menu" id="store">
+                        <option value="store-1">Store 1</option>
+                        <option value="store-2">Store 2</option>
+                        <option value="store-3">Store 3</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="column">
+                    <div class="inner-column">
+                      <label for="category">Category:</label>
+                      <select class="dropdown-menu" id="category">
+                        <option value="category-1">Category 1</option>
+                        <option value="category-2">Category 2</option>
+                        <option value="category-3">Category 3</option>
+                      </select>
+                    </div>
+                    <div class="inner-column">
+                      <label for="country">Country:</label>
+                      <select class="dropdown-menu" id="country">
+                        <option value="country-1">Country 1</option>
+                        <option value="country-2">Country 2</option>
+                        <option value="country-3">Country 3</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="date-from">Date Range From:</label>
+                  <input class="calendar-dropdown" type="date" id="date-from" name="date-from">
+                  <label for="date-to">Date Range To:</label>
+                  <input class="calendar-dropdown" type="date" id="date-to" name="date-to">
+                </div>
+              </div>
+              <div class="form-group form-action">
+                <button type="button" onclick="viewInventoryReport()">View</button>
+                <button type="button" onclick="clearInventoryReport()">Clear</button>
+              </div>
+            </div>
+
+            <table>
+              <thead>
+                <tr>
+                  <td>Serial Number</td>
+                  <td>Product Name</td>
+                  <td>Category</td>
+                  <td>Quantity</td>
+                  <td>Price</td>
+                  <td>Store</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Product 1</td>
+                  <td>Category 1</td>
+                  <td>10</td>
+                  <td>$10.00</td>
+                  <td>Store 1</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Product 2</td>
+                  <td>Category 2</td>
+                  <td>5</td>
+                  <td>$15.00</td>
+                  <td>Store 2</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Product 3</td>
+                  <td>Category 1</td>
+                  <td>8</td>
+                  <td>$12.50</td>
+                  <td>Store 3</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div id="user-activity-report">
+            <h3 class="heading">User Activity Log Report</h3>
+            <div class="report-form">
+              <div class="form-group">
+                <div class="column">
+                  <div class="inner-column">
+                    <label for="user">User:</label>
+                    <select class="dropdown-menu" id="user">
+                      <option value="user-1">User 1</option>
+                      <option value="user-2">User 2</option>
+                      <option value="user-3">User 3</option>
+                    </select>
+                  </div>
+                  <div class="inner-column">
+                    <label for="activity">Activity:</label>
+                    <select class="dropdown-menu" id="activity">
+                      <option value="activity-1">Activity 1</option>
+                      <option value="activity-2">Activity 2</option>
+                      <option value="activity-3">Activity 3</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="column">
+                  <div class="inner-column">
+                    <label for="date-from">Date Range From:</label>
+                    <input class="calendar-dropdown" type="date" id="date-from" name="date-from">
+                  </div>
+                  <div class="inner-column">
+                    <label for="date-to">Date Range To:</label>
+                    <input class="calendar-dropdown" type="date" id="date-to" name="date-to">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group form-action">
+                <button type="button" onclick="viewActivityLogReport()">View</button>
+                <button type="button" onclick="clearActivityLogReport()">Clear</button>
+              </div>
+            </div>
+
+            <table>
+              <thead>
+                <tr>
+                  <td>Serial Number</td>
+                  <td>User</td>
+                  <td>Activity</td>
+                  <td>Date</td>
+                  <td>Time</td>
+                  <td>Details</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>User 1</td>
+                  <td>Activity 1</td>
+                  <td>2023-05-01</td>
+                  <td>10:30 AM</td>
+                  <td>Details 1</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>User 2</td>
+                  <td>Activity 2</td>
+                  <td>2023-05-02</td>
+                  <td>11:45 AM</td>
+                  <td>Details 2</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>User 3</td>
+                  <td>Activity 3</td>
+                  <td>2023-05-03</td>
+                  <td>02:15 PM</td>
+                  <td>Details 3</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
         </div>
 
         <div class="container store">
