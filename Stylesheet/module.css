@@ -88,9 +88,61 @@
     display: block;
 }
 
+/* ////////////////////////All tabs */
+.tab-panel1,
+.tab-panel2,
+.tab-panel3 {
+    display: none;
+}
+
+.tab-panel1.active,
+.tab-panel2.active,
+.tab-panel3.active {
+    display: block;
+}
 
 
+/* ////////////////////btn-style */
 
+.btn-wd-icon {
+    display: flex;
+    align-items: center;
+    background: #dedede;
+    border: 1px solid;
+    padding:5px;
+}
+
+.btn-icon {
+    border: unset;
+    background: unset;
+}
+
+/* ///////////////form */
+.form-group>label,
+.form-group>input,
+.form-group>select {
+   border: 1px solid #d2d2d2;
+   padding: 8px;
+}
+
+#view-users form , #view-store form {
+   display: flex;
+}
+.main-bar {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.form-group-icon{
+    display: flex;
+}
+
+/* /////////////////table */
+table{
+width: 100%;
+border-collapse: collapse;
+}
 /* ////////////////////////////usermodule */
 
 .usermodule .heading {
@@ -99,6 +151,7 @@
 
 
 /* ////////////////////////////adduser */
+
 
 #add-user .user-form {
 
@@ -127,12 +180,6 @@
 
 }
 
-#add-user .form-group>label,
-#add-user .form-group>input,
-#add-user .form-group>select {
-    border: 1px solid #d2d2d2;
-    padding: 8px;
-}
 
 #add-user .input-field,
 #add-user select {
@@ -176,38 +223,7 @@
 
 /* ////////////////////////view-users */
 
-#view-users form {
-    display: flex;
-}
 
-#view-users input {
-    border: none;
-    cursor: pointer;
-    padding: 5px 15px;
-    border: 2px solid #ababab;
-    margin: 2px;
-
-
-
-}
-
-#view-users input[type="submit"] {
-    background-color: #e1e1e1;
-    color: black;
-    border: none;
-    cursor: pointer;
-    padding: 5px 30px;
-    margin: 2px;
-    border: 2px solid #ababab;
-    font-weight: bold;
-
-
-
-}
-
-#view-users table {
-    width: 100%;
-}
 
 #view-users table thead td {
     font-weight: bold;
@@ -247,22 +263,7 @@
     color: #fff;
 }
 
-#role-permission .tab-panel1,
-#role-permission .tab-panel2 {
-    display: none;
-}
 
-#role-permission .tab-panel1.active,
-#role-permission .tab-panel2.active {
-    display: block;
-}
-
-
-#role-permission table {
-    width: 100%;
-    margin-bottom: 10px;
-    border-collapse: collapse;
-}
 
 #role-permission table th,
 #role-permission table td {
@@ -335,25 +336,11 @@
     border-radius: 5px 5px 0 0;
 }
 
-
-
-
 .taxpayer .tab-content {
     background-color: #dcdcdc;
     padding: 5px;
     border: 2px solid #ccc;
 }
-
-.taxpayer .tab-panel {
-    display: none;
-}
-
-.taxpayer .tab-panel.active {
-    display: block;
-}
-
-
-
 
 #reg-new-tax-payer .row {
     display: flex;
@@ -526,107 +513,23 @@
    /////////////////////////////////////////////////////////////////////
    ///////////////////////////////////////////////////////////////////// */
 
+/* /////////////sales */
 
-/* /* /////////////////////register-store */
-#register-store .store-form {
-    background-color: #f0f0f0;
-    margin: 30px auto;
+
+#exp-report .tab-links a {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #ccc;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px 5px 0 0;
 }
 
-#register-store label {
-    display: block;
-    text-align: left;
-    font-size: 1.2em;
-    line-height: 1.2;
-    width: 30%;
+#exp-report .tab-content {
+    background-color: #dcdcdc;
+    padding: 5px;
+    border: 2px solid #ccc;
 }
-
-#register-store input {
-    font-size: 1.2em;
-    line-height: 1.5;
-}
-
-#register-store .form-group {
-    display: flex;
-}
-
-#register-store .form-group>label,
-#register-store .form-group>input {
-    border: 1px solid #d2d2d2;
-    padding: 8px;
-}
-
-#register-store .input-field {
-    width: 65%;
-}
-
-#register-store .form-group.form-action {
-    display: flex;
-    justify-content: space-around;
-    width: 60%;
-    margin: 0 auto;
-}
-
-@media screen and (max-width: 600px) {
-    #register-store form {
-        margin-top: 20px;
-    }
-
-    #register-store label {
-        font-size: 1.1em;
-        line-height: 1.2;
-    }
-
-    #register-store input {
-        font-size: 1.1em;
-        line-height: 1.5;
-    }
-
-    #register-store button[type="submit"] {
-        font-size: 1.1em;
-        line-height: 1.5;
-    }
-}
-
-
-
-/* Styles for the Store List */
-
-
-#view-store table thead td {
-    font-weight: bold;
-    text-align: center;
-}
-
-#view-store table td {
-    padding: 20px 5px;
-    background: #f0f0f0;
-}
-
-#view-store table {
-    background-color: #ced0d2;
-}
-
-/* Styles for the Store Details */
-
-
-
-#store-info table thead td {
-    font-weight: bold;
-    text-align: center;
-}
-
-#store-info table td {
-    padding: 10px 5px;
-    background: #f0f0f0;
-}
-
-#store-info table {
-    background-color: #ced0d2;
-    width: 100%;
-}
-
-
 
 /* Styles for the Sales Report */
 
@@ -700,10 +603,7 @@
 
 
 
-#sales-report table {
-    width: 100%;
-    border-collapse: collapse;
-}
+
 
 #sales-report table thead td {
     font-weight: bold;
@@ -726,10 +626,7 @@
     margin-bottom: 20px;
 }
 
-#receipt-info table {
-    width: 100%;
-    border-collapse: collapse;
-}
+
 
 #receipt-info table thead td {
     font-weight: bold;
@@ -745,65 +642,70 @@
 }
 
 /* Styles for the Create New Expense */
-
-#create-new-expense .expense-form {
+#create-new-expense .tab-panel1 {
     background-color: #f0f0f0;
     margin: 30px auto;
-}
-
-#create-new-expense label {
+  }
+  
+  #create-new-expense label {
     display: block;
     text-align: left;
     font-size: 1.2em;
     line-height: 1.2;
     width: 30%;
-}
-
-#create-new-expense input,
-#create-new-expense select,
-#create-new-expense textarea {
+  }
+  
+  #create-new-expense input {
     font-size: 1.2em;
-    line-height: 1.5;
-    width: 65%;
+  }
+  
+  #create-new-expense .row {
+    display: flex;
+  }
+  
+  #create-new-expense .row>label {
+    margin-right: 10px;
+
+  }
+ 
+
+  #create-new-expense .row>input {
     border: 1px solid #d2d2d2;
     padding: 8px;
-}
-
-#create-new-expense .form-group {
-    display: flex;
-}
-
-#create-new-expense .form-group.form-action {
+  }
+  
+  #create-new-expense .input-field {
+    width: 65%;
+  }
+  
+  #create-new-expense .buttons {
     display: flex;
     justify-content: space-around;
     width: 60%;
     margin: 0 auto;
-}
-
-@media screen and (max-width: 600px) {
+  }
+  
+  @media screen and (max-width: 600px) {
     #create-new-expense form {
-        margin-top: 20px;
+      margin-top: 20px;
     }
-
+  
     #create-new-expense label {
-        font-size: 1.1em;
-        line-height: 1.2;
+      font-size: 1.1em;
+      line-height: 1.2;
     }
-
-    #create-new-expense input,
-    #create-new-expense select,
-    #create-new-expense textarea {
-        font-size: 1.1em;
-        line-height: 1.5;
+  
+    #create-new-expense input {
+      font-size: 1.1em;
+      line-height: 1.5;
     }
-
+  
     #create-new-expense input[type="submit"] {
-        font-size: 1.1em;
-        line-height: 1.5;
+      font-size: 1.1em;
+      line-height: 1.5;
     }
-}
-
-
+  }
+  
 /* Styles for the Inventory Report */
 
 #inventory-report .heading {
@@ -863,10 +765,7 @@
     margin-right: 10px;
 }
 
-#inventory-report table {
-    width: 100%;
-    border-collapse: collapse;
-}
+
 
 #inventory-report table thead td {
     font-weight: bold;
@@ -882,6 +781,30 @@
     cursor: pointer;
 }
 
+/* Styles for the Create Expense List */
+
+#create-new-expense .row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#create-new-expense .checkbox-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+#create-new-expense .row label {
+    width: 200px;
+}
+
+#create-new-expense .buttons {
+    margin-top: 22px;
+    display: flex;
+}
+
 /* Styles for the View Expense List */
 
 #view-expense-list .heading {
@@ -889,20 +812,73 @@
     margin-bottom: 20px;
 }
 
+#view-expense-list .report-form {
+    margin-bottom: 20px;
+}
+
+#view-expense-list .form-group {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+#view-expense-list .column {
+    display: flex;
+    flex-direction: column;
+}
+
+#view-expense-list label {
+    display: block;
+    font-size: 1.2em;
+}
+
+#view-expense-list .dropdown-menu {
+    font-size: 1.2em;
+    border: 1px solid #d2d2d2;
+    margin-bottom: 10px;
+}
+
+#view-expense-list .form-action {
+    align-items: center;
+}
+
+#view-expense-list .report-form {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+#view-expense-list .inner-column {
+    display: flex;
+    align-items: center;
+}
+
+#view-expense-list .form-action button {
+    font-size: 1.2em;
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+
 #view-expense-list table thead td {
     font-weight: bold;
     text-align: center;
+    padding: 10px;
 }
 
 #view-expense-list table td {
-    padding: 20px 5px;
-    background: #f0f0f0;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #d2d2d2;
+    background-color: #f0f0f0;
+    cursor: pointer;
 }
 
-#view-expense-list table {
-    background-color: #ced0d2;
-    width: 100%;
-}
 
 
 /* Styles for the User Activity Log Report */
@@ -964,10 +940,6 @@
     margin-right: 10px;
 }
 
-#user-activity-report table {
-    width: 100%;
-    border-collapse: collapse;
-}
 
 #user-activity-report table thead td {
     font-weight: bold;
@@ -982,3 +954,112 @@
     background-color: #f0f0f0;
     cursor: pointer;
 }
+
+
+/*   
+  /////////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////////////////
+   sale end
+   /////////////////////////////////////////////////////////////////////
+   ///////////////////////////////////////////////////////////////////// */
+
+/* /* /////////////////////register-store */
+#register-store .store-form {
+    background-color: #f0f0f0;
+    margin: 30px auto;
+}
+
+#register-store label {
+    display: block;
+    text-align: left;
+    font-size: 1.2em;
+    line-height: 1.2;
+    width: 30%;
+}
+
+#register-store input {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+#register-store .form-group {
+    display: flex;
+}
+
+
+#register-store .input-field {
+    width: 65%;
+}
+
+#register-store .form-group.form-action {
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+    #register-store form {
+        margin-top: 20px;
+    }
+
+    #register-store label {
+        font-size: 1.1em;
+        line-height: 1.2;
+    }
+
+    #register-store input {
+        font-size: 1.1em;
+        line-height: 1.5;
+    }
+
+    #register-store button[type="submit"] {
+        font-size: 1.1em;
+        line-height: 1.5;
+    }
+}
+
+
+
+/* Styles for the Store List */
+
+
+#view-store table thead td {
+    font-weight: bold;
+    text-align: center;
+}
+
+#view-store table td {
+    padding: 20px 5px;
+    background: #f0f0f0;
+}
+
+#view-store table {
+    background-color: #ced0d2;
+}
+
+/* Styles for the Store Details */
+
+
+
+#store-info table thead td {
+    font-weight: bold;
+    text-align: center;
+}
+
+#store-info table td {
+    padding: 10px 5px;
+    background: #f0f0f0;
+}
+
+#store-info table {
+    background-color: #ced0d2;
+   
+}
+
+/*   
+  /////////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////////////////
+ store end
+   /////////////////////////////////////////////////////////////////////
+   ///////////////////////////////////////////////////////////////////// */

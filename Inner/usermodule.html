@@ -107,8 +107,14 @@
                 </div>
               </div>
               <div class="form-group form-action">
-                <input type="submit" value="Create">
-                <input type="reset" value="Cancel">
+                <div class="btn-wd-icon">
+                  <img width="20px" src="../assets/add.svg" alt="">
+                  <input type="submit" value="Create" class="btn-icon">
+                </div>
+                <div class="btn-wd-icon">
+                  <img width="20px" src="../assets/cross.svg" alt="">
+                  <input type="reset" value="Cancel" class="btn-icon">
+                </div>
 
               </div>
 
@@ -117,653 +123,642 @@
 
           <div id="view-users">
             <h3 class="heading">View User List</h3>
-            <form>
-              <div class="form-group">
-                <input type="text" id="user-search" name="user-search" value="">
-              </div>
-              <div class="form-group">
-                <input type="submit" value="Search User">
-              </div>
-            </form>
-            <table>
-              <thead>
-                <tr>
-                  <td>User ID</td>
-                  <td>Last Name</td>
-                  <td>First Name</td>
-                  <td>Role Type</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>001</td>
-                  <td>Doe</td>
-                  <td>John</td>
-                  <td>Admin</td>
-                </tr>
-                <tr>
-                  <td>002</td>
-                  <td>Smith</td>
-                  <td>Jane</td>
-                  <td>Moderator</td>
-                </tr>
-                <tr>
-                  <td>003</td>
-                  <td>Williams</td>
-                  <td>Mark</td>
-                  <td>Viewer</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+            <div class="main-bar">
+              <form>
 
-          <div id="role-permission" class="tab-container">
-
-            <div class="tab-links">
-              <a href="#create-role-type" onclick="openTab(event, 'create-role-type')">Create New Role Type</a>
-              <a href="#view-role-types" onclick="openTab(event, 'view-role-types')">View Role Types</a>
-            </div>
-
-            <div class="tab-content">
-              <div id="create-role-type" class="tab-panel1 active">
-                <form>
-                  <div class="role-add">
-                    <label for="new-role-type">New Role Type:</label>
-                    <input type="text" id="new-role-type" name="new-role-type" value="">
-
-                    <input type="submit" value="Save">
-                  </div>
-
-                  <h4 class="heading">Permissions</h4>
-
-                  <table>
-                    <thead>
-                      <tr>
-                        <th>User</th>
-                        <th>Tax Payer</th>
-                        <th>Reports</th>
-                        <th>Stores</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>
-                          <label for="view-user-list">
-                            <input type="checkbox" id="view-user-list">
-                            View User List
-                          </label>
-                          <label for="edit-user">
-                            <input type="checkbox" id="edit-user">
-                            Edit User
-                          </label>
-                          <label for="create-user">
-                            <input type="checkbox" id="create-user">
-                            Create User
-                          </label>
-                          <label for="disable-print">
-                            <input type="checkbox" id="disable-print">
-                            Disable Print
-                          </label>
-                          <label for="disable-export">
-                            <input type="checkbox" id="disable-export">
-                            Disable Export
-                          </label>
-                        </td>
-                        <td>
-                          <label for="create-tax-payer">
-                            <input type="checkbox" id="create-tax-payer">
-                            Create Tax Payer
-                          </label>
-                          <label for="view-tx-payer">
-                            <input type="checkbox" id="view-tx-payer">
-                            View Tax Payer
-                          </label>
-                          <label for="edit-tax-payer">
-                            <input type="checkbox" id="edit-tax-payer">
-                            Edit Tax Payer
-                          </label>
-                          <label for="delete-tax-payer">
-                            <input type="checkbox" id="delete-tax-payer">
-                            Delete Tax Payer
-                          </label>
-                          <label for="disable-print-tax-payer">
-                            <input type="checkbox" id="disable-print-tax-payer">
-                            Disable Print
-                          </label>
-                          <label for="disable-export-tax-payer">
-                            <input type="checkbox" id="disable-export-tax-payer">
-                            Disable Export
-                          </label>
-                        </td>
-                        <td>
-                          <label for="view-sale-report">
-                            <input type="checkbox" id="view-sale-report">
-                            View Sale Report
-                          </label>
-                          <label for="view-user-activity-log">
-                            <input type="checkbox" id="view-user-activity-log">
-                            View User Activity Log
-                          </label>
-                          <label for="disable-print-report">
-                            <input type="checkbox" id="disable-print-report">
-                            Disable Print
-                          </label>
-                          <label for="disable-export-report">
-                            <input type="checkbox" id="disable-export-report">
-                            Disable Export
-                          </label>
-                        </td>
-                        <td>
-                          <label for="create-store">
-                            <input type="checkbox" id="create-store">
-                            Create Store
-                          </label>
-                          <label for="view-store-list">
-                            <input type="checkbox" id="view-store-list">
-                            View Store List
-                          </label>
-                          <label for="edit-store">
-                            <input type="checkbox" id="edit-store">
-                            Edit Store
-                          </label>
-                          <label for="delete-store">
-                            <input type="checkbox" id="delete-store">
-                            Delete Store
-                          </label>
-                          <label for="disable-print-store">
-                            <input type="checkbox" id="disable-print-store">
-                            Disable Print
-                          </label>
-                          <label for="disable-export-store">
-                            <input type="checkbox" id="disable-export-store">
-                            Disable Export
-                          </label>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-
-
-                </form>
-              </div>
-
-              <div id="view-role-types" class="tab-panel2">
-                <div class="role-types">
-                  <table>
-                    <thead>
-                      <tr>
-                        <th>Role Types</th>
-                        <th colspan="2">Action</th>
-
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>Admin</td>
-                        <td><a href="#">Edit</a></td>
-                        <td><a href="#">Delete</a></td>
-                      </tr>
-                      <tr>
-                        <td>Moderator</td>
-                        <td><a href="#">Edit</a></td>
-                        <td><a href="#">Delete</a></td>
-                      </tr>
-                      <tr>
-                        <td>Viewer</td>
-                        <td><a href="#">Edit</a></td>
-                        <td><a href="#">Delete</a></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="container taxpayer">
-          <div id="reg-tax-payer" class="tab-container">
-            <div class="tab-links">
-              <a href="#register-new-tax-payer" onclick="openTab(event, 'register-new-tax-payer')">Register New Tax
-                Payer</a>
-              <a href="#tp-details" onclick="openTab(event, 'tp-details')">TP Details</a>
-              <a href="#tp-contacts" onclick="openTab(event, 'tp-contacts')">TP Contacts</a>
-            </div>
-
-            <div class="tab-content">
-              <div id="register-new-tax-payer" class="tab-panel active">
-                <form>
-                  <h4 class="heading">Core Details</h4>
-                  <div class="row">
-                    <label for="tin-number">TIN Number:</label>
-                    <input type="text" id="tin-number">
-                  </div>
-                  <div class="row">
-                    <label for="tax-payer-type">Tax Payer Type:</label>
-                    <input type="text" id="tax-payer-type">
-                  </div>
-                  <div class="row">
-                    <label for="organization-type">Organization Type:</label>
-                    <input type="text" id="organization-type">
-                  </div>
-
-                  <h4 class="heading">Names</h4>
-                  <div class="row">
-                    <div class="checkbox-row">
-                      <input type="checkbox" id="registered">
-                      <label for="registered">Registered</label>
-                      <input type="checkbox" id="trade">
-                      <label for="trade">Trade</label>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <label for="registered-name">Registered Name:</label>
-                    <input type="text" id="registered-name">
-                  </div>
-                  <div class="row">
-                    <input type="checkbox" id="primary-name">
-                    <label for="primary-name">Primary Name?</label>
-                  </div>
-                  <div class="row">
-                    <label for="trade-name">Trade Name:</label>
-                    <input type="text" id="trade-name">
-                  </div>
-
-                  <div class="buttons">
-                    <button id="saveButton">Save</button>
-                    <button id="cancelButton">Cancel</button>
-                  </div>
-                </form>
-              </div>
-
-
-              <div id="tp-details" class="tab-panel ">
-                <form>
-                  <h4 class="heading">Details</h4>
-                  <div class="row">
-                    <div class="detail-col">
-                      <label for="business-nature">Business Nature:</label>
-                      <input type="text" id="business-nature">
-                    </div>
-                    <div class="detail-col">
-
-                      <label for="business-license-number">Business License Number:</label>
-                      <input type="text" id="business-license-number">
-                    </div>
-                  </div>
-
-                  <h4 class="heading">Contact Details</h4>
-                  <div class="row">
-                    <div class="contact-col">
-
-                      <label for="address">Address:</label>
-                      <input type="text" id="address">
-
-                    </div>
-                    <div class="contact-col">
-
-                      <label for="village">Village:</label>
-                      <input type="text" id="village">
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="contact-col">
-                      <label for="island">Island:</label>
-                      <input type="text" id="island">
-                    </div>
-                    <div class="contact-col">
-                      <label for="country">Country:</label>
-                      <input type="text" id="country">
-                    </div>
-                  </div>
-
-                  <h4 class="heading">Phone Types</h4>
-                  <div class="row">
-                    <!-- <label>Phone Types:</label> -->
-                    <div class="phone-col">
-                      <input type="checkbox" id="home"><label for="home">Home</label>
-                      <input type="checkbox" id="mobile"><label for="mobile">Mobile</label>
-                      <input type="checkbox" id="business"><label for="business">Business</label>
-                      <input type="checkbox" id="fax"><label for="fax">Fax</label>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="phone-col">
-                      <label for="phone-country">Country:</label>
-                      <input type="text" id="phone-country">
-                    </div>
-                    <div class="phone-col">
-
-                      <label for="phone-number1">Phone Number 1:</label>
-                      <input type="text" id="phone-number1">
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="phone-col">
-
-                      <label for="area-code">Area Code:</label>
-                      <input type="text" id="area-code">
-                    </div>
-                    <div class="phone-col">
-
-                      <label for="phone-number2">Phone Number 2:</label>
-                      <input type="text" id="phone-number2">
-                    </div>
-                  </div>
-                  <div class="buttons">
-                    <button id="saveButton">Save</button>
-                    <button id="cancelButton">Cancel</button>
-                  </div>
-                </form>
-              </div>
-
-              <div id="tp-contacts" class="tab-panel">
-                <form>
-
-
-                  <h4 class="heading">Email Types</h4>
-                  <div class="row">
-                    <!-- <label>Phone Types:</label> -->
-                    <div class="email-col">
-                      <input type="checkbox" id="primary"><label for="primary">Primary</label>
-                      <input type="checkbox" id="secondary"><label for="secondary">Secondary</label>
-
-                    </div>
-                  </div>
-                  <h4 class="heading">Person In Charge</h4>
-                  <div class="row">
-                    <div class="person-col">
-
-                      <label for="first-name">First Name:</label>
-                      <input type="text" id="first-name">
-
-                    </div>
-                    <div class="person-col">
-
-                      <label for="last-name">Last Name:</label>
-                      <input type="text" id="last-name">
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="person-col">
-                      <label for="landline">Landline:</label>
-                      <input type="text" id="landline">
-                    </div>
-                    <div class="person-col">
-                      <label for="mobile">Mobile:</label>
-                      <input type="text" id="mobile">
-                    </div>
-                  </div>
-
-
-                  <div class="row">
-                    <div class="person-col">
-                      <label for="email">Email Address:</label>
-                      <input type="text" id="email">
-                    </div>
-
-                  </div>
-
-                  <div class="buttons">
-                    <button id="saveButton">Save</button>
-                    <button id="cancelButton">Cancel</button>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-          <div id="view-tax-payer">
-            <h3 class="heading">Tax Payer List</h3>
-            <form>
-              <div class="form-group">
-                <input type="text" id="tax-payer-search" name="tax-payer-search" value="">
-                <input type="submit" value="Search Tax Payer">
-              </div>
-            </form>
-            <div>
-              <p>Total No. of taxpayers: <input type="text" id="total-taxpayers" name="total-taxpayers"></p>
-            </div>
-            <table>
-              <thead>
-                <tr>
-                  <td>TIN Number</td>
-                  <td>Registered Name</td>
-                  <td>Trade Name</td>
-                  <td>Organization Type</td>
-                  <td colspan="2">Comments</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td onclick="showUserInfo(this)">001</td>
-                  <td>Dummy Company 1</td>
-                  <td>Trade Name 1</td>
-                  <td>Organization Type 1</td>
-                  <td colspan="2">
-                    <button>New</button>
-                    <button>View</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td onclick="showUserInfo(this)">002</td>
-                  <td>Dummy Company 2</td>
-                  <td>Trade Name 2</td>
-                  <td>Organization Type 2</td>
-                  <td colspan="2">
-                    <button>New</button>
-                    <button>View</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td onclick="showUserInfo(this)">003</td>
-                  <td>Dummy Company 3</td>
-                  <td>Trade Name 3</td>
-                  <td>Organization Type 3</td>
-                  <td colspan="2">
-                    <button>New</button>
-                    <button>View</button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-
-
-
-        </div>
-
-        <div class="container sales-report">
-          <div id="sales-report">
-            <h3 class="heading">Sales Report</h3>
-            <div class="report-form">
-              <div class="form-col-section">
                 <div class="form-group">
-                  <div class="column">
-                    <div class="inner-column">
-                      <label for="tax-payer">Tax Payer:</label>
-                      <select class="dropdown-menu" id="tax-payer">
-                        <option value="tax-payer-1">Tax Payer 1</option>
-                        <option value="tax-payer-2">Tax Payer 2</option>
-                        <option value="tax-payer-3">Tax Payer 3</option>
-                      </select>
-                    </div>
-                    <div class="inner-column">
-                      <label for="store">Store:</label>
-                      <select class="dropdown-menu" id="store">
-                        <option value="store-1">Store 1</option>
-                        <option value="store-2">Store 2</option>
-                        <option value="store-3">Store 3</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="column">
-                    <div class="inner-column">
-
-                      <label for="ct-type">CT Type:</label>
-                      <select class="dropdown-menu" id="ct-type">
-                        <option value="ct-type-1">CT Type 1</option>
-                        <option value="ct-type-2">CT Type 2</option>
-                        <option value="ct-type-3">CT Type 3</option>
-                      </select>
-                    </div>
-                    <div class="inner-column">
-
-                      <label for="country">Country:</label>
-                      <select class="dropdown-menu" id="country">
-                        <option value="country-1">Country 1</option>
-                        <option value="country-2">Country 2</option>
-                        <option value="country-3">Country 3</option>
-                      </select>
-                    </div>
-                  </div>
+                  <input type="text" id="user-search" name="user-search" value="">
                 </div>
                 <div class="form-group">
-                  <label for="date-from">Date Range From:</label>
-                  <input class="calendar-dropdown" type="date" id="date-from" name="date-from">
-                  <label for="date-to">Date Range To:</label>
-                  <input class="calendar-dropdown" type="date" id="date-to" name="date-to">
+                  <div class="btn-wd-icon">
+                    <img width="20px" src="../assets/search.svg" alt="">
+                    <input type="submit" value="Search User" class="btn-icon">
+                  </div>
                 </div>
-              </div>
-              <div class="form-group form-action">
-                <button type="button" onclick="viewSalesReport()">View</button>
-                <button type="button" onclick="clearSalesReport()">Clear</button>
-              </div>
+
+              </form>
+              <form>
+                <div class="form-group form-group-icon">
+
+                  <div class="btn-wd-icon">
+                    <img width="20px" src="../assets/search.svg" alt="">
+                  </div>
+                  <div class="btn-wd-icon">
+                    <img width="20px" src="../assets/search.svg" alt="">
+                  </div>
+                  <div class="btn-wd-icon">
+                    <img width="20px" src="../assets/search.svg" alt="">
+                  </div>
             </div>
 
+            </form>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <td>User ID</td>
+                <td>Last Name</td>
+                <td>First Name</td>
+                <td>Role Type</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>001</td>
+                <td>Doe</td>
+                <td>John</td>
+                <td>Admin</td>
+              </tr>
+              <tr>
+                <td>002</td>
+                <td>Smith</td>
+                <td>Jane</td>
+                <td>Moderator</td>
+              </tr>
+              <tr>
+                <td>003</td>
+                <td>Williams</td>
+                <td>Mark</td>
+                <td>Viewer</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-            <table>
-              <thead>
-                <tr>
-                  <td>Serial Number</td>
-                  <td>Date</td>
-                  <td>Time Stamp</td>
-                  <td>Form of Payments</td>
-                  <td>Customer Number</td>
-                  <td>Customer TIN</td>
-                  <td>Reference Number</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>2023-05-01</td>
-                  <td>10:30 AM</td>
-                  <td>Cash</td>
-                  <td>12345</td>
-                  <td>ABC123</td>
-                  <td onclick="showReceiptInfo(this)">REF001</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>2023-05-02</td>
-                  <td>11:45 AM</td>
-                  <td>Credit Card</td>
-                  <td>67890</td>
-                  <td>DEF456</td>
-                  <td onclick="showReceiptInfo(this)">REF002</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>2023-05-03</td>
-                  <td>02:15 PM</td>
-                  <td>Debit Card</td>
-                  <td>54321</td>
-                  <td>GHI789</td>
-                  <td onclick="showReceiptInfo(this)">REF003</td>
-                </tr>
-              </tbody>
-            </table>
+        <div id="role-permission" class="tab-container">
 
+          <div class="tab-links">
+            <a href="#create-role-type" onclick="openTab(event, 'create-role-type')">Create New Role Type</a>
+            <a href="#view-role-types" onclick="openTab(event, 'view-role-types')">View Role Types</a>
           </div>
 
-          <div id="exp-report" class="tab-container">
-            <div class="tab-links">
-              <a href="#create-new-expense" onclick="openTab(event, 'create-new-expense')">Create New Expense</a>
-              <a href="#view-expense-list" onclick="openTab(event, 'view-expense-list')">View Expense List</a>
-            </div>
+          <div class="tab-content">
+            <div id="create-role-type" class="tab-panel1 active">
+              <form>
+                <div class="role-add">
+                  <label for="new-role-type">New Role Type:</label>
+                  <input type="text" id="new-role-type" name="new-role-type" value="">
 
-            <div class="tab-content">
-              <div id="create-new-expense" class="tab-panel active">
-                <form>
-                  <div class="expense-form">
-                    <div class="form-group">
-                      <label for="expense-id">Expense ID:</label>
-                      <input class="input-field" type="text" id="expense-id" name="expense-id" value="" disabled>
-                    </div>
-                    <div class="form-group">
-                      <label for="expense-date">Expense Date:</label>
-                      <input class="input-field" type="date" id="expense-date" name="expense-date" value="">
-                    </div>
-                    <div class="form-group">
-                      <label for="expense-category">Expense Category:</label>
-                      <select id="expense-category" name="expense-category">
-                        <option value="category-1">Category 1</option>
-                        <option value="category-2">Category 2</option>
-                        <option value="category-3">Category 3</option>
-                      </select>
-                    </div>
-                    <div class="form-group">
-                      <label for="expense-amount">Expense Amount:</label>
-                      <input class="input-field" type="text" id="expense-amount" name="expense-amount" value="">
-                    </div>
-                    <div class="form-group">
-                      <label for="expense-description">Expense Description:</label>
-                      <textarea class="input-field" id="expense-description" name="expense-description"></textarea>
-                    </div>
-                  </div>
-                  <div class="form-group form-action">
-                    <input type="submit" value="Create">
-                    <input type="reset" value="Cancel">
-                  </div>
-                </form>
-              </div>
+                  <input type="submit" value="Save">
+                </div>
 
+                <h4 class="heading">Permissions</h4>
 
-              <div id="view-expense-list" class="tab-panel">
-                <h3 class="heading">View Expense List</h3>
                 <table>
                   <thead>
                     <tr>
-                      <td>Expense ID</td>
-                      <td>Date</td>
-                      <td>Category</td>
-                      <td>Amount</td>
-                      <td>Description</td>
+                      <th>User</th>
+                      <th>Tax Payer</th>
+                      <th>Reports</th>
+                      <th>Stores</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td>1</td>
-                      <td>2023-05-01</td>
-                      <td>Category 1</td>
-                      <td>$100.00</td>
-                      <td>Expense 1 Description</td>
+                      <td>
+                        <label for="view-user-list">
+                          <input type="checkbox" id="view-user-list">
+                          View User List
+                        </label>
+                        <label for="edit-user">
+                          <input type="checkbox" id="edit-user">
+                          Edit User
+                        </label>
+                        <label for="create-user">
+                          <input type="checkbox" id="create-user">
+                          Create User
+                        </label>
+                        <label for="disable-print">
+                          <input type="checkbox" id="disable-print">
+                          Disable Print
+                        </label>
+                        <label for="disable-export">
+                          <input type="checkbox" id="disable-export">
+                          Disable Export
+                        </label>
+                      </td>
+                      <td>
+                        <label for="create-tax-payer">
+                          <input type="checkbox" id="create-tax-payer">
+                          Create Tax Payer
+                        </label>
+                        <label for="view-tx-payer">
+                          <input type="checkbox" id="view-tx-payer">
+                          View Tax Payer
+                        </label>
+                        <label for="edit-tax-payer">
+                          <input type="checkbox" id="edit-tax-payer">
+                          Edit Tax Payer
+                        </label>
+                        <label for="delete-tax-payer">
+                          <input type="checkbox" id="delete-tax-payer">
+                          Delete Tax Payer
+                        </label>
+                        <label for="disable-print-tax-payer">
+                          <input type="checkbox" id="disable-print-tax-payer">
+                          Disable Print
+                        </label>
+                        <label for="disable-export-tax-payer">
+                          <input type="checkbox" id="disable-export-tax-payer">
+                          Disable Export
+                        </label>
+                      </td>
+                      <td>
+                        <label for="view-sale-report">
+                          <input type="checkbox" id="view-sale-report">
+                          View Sale Report
+                        </label>
+                        <label for="view-user-activity-log">
+                          <input type="checkbox" id="view-user-activity-log">
+                          View User Activity Log
+                        </label>
+                        <label for="disable-print-report">
+                          <input type="checkbox" id="disable-print-report">
+                          Disable Print
+                        </label>
+                        <label for="disable-export-report">
+                          <input type="checkbox" id="disable-export-report">
+                          Disable Export
+                        </label>
+                      </td>
+                      <td>
+                        <label for="create-store">
+                          <input type="checkbox" id="create-store">
+                          Create Store
+                        </label>
+                        <label for="view-store-list">
+                          <input type="checkbox" id="view-store-list">
+                          View Store List
+                        </label>
+                        <label for="edit-store">
+                          <input type="checkbox" id="edit-store">
+                          Edit Store
+                        </label>
+                        <label for="delete-store">
+                          <input type="checkbox" id="delete-store">
+                          Delete Store
+                        </label>
+                        <label for="disable-print-store">
+                          <input type="checkbox" id="disable-print-store">
+                          Disable Print
+                        </label>
+                        <label for="disable-export-store">
+                          <input type="checkbox" id="disable-export-store">
+                          Disable Export
+                        </label>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+
+              </form>
+            </div>
+
+            <div id="view-role-types" class="tab-panel2">
+              <div class="role-types">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Role Types</th>
+                      <th colspan="2">Action</th>
+
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Admin</td>
+                      <td><a href="#">Edit</a></td>
+                      <td><a href="#">Delete</a></td>
                     </tr>
                     <tr>
-                      <td>2</td>
-                      <td>2023-05-02</td>
-                      <td>Category 2</td>
-                      <td>$50.00</td>
-                      <td>Expense 2 Description</td>
+                      <td>Moderator</td>
+                      <td><a href="#">Edit</a></td>
+                      <td><a href="#">Delete</a></td>
                     </tr>
                     <tr>
-                      <td>3</td>
-                      <td>2023-05-03</td>
-                      <td>Category 1</td>
-                      <td>$75.00</td>
-                      <td>Expense 3 Description</td>
+                      <td>Viewer</td>
+                      <td><a href="#">Edit</a></td>
+                      <td><a href="#">Delete</a></td>
                     </tr>
                   </tbody>
                 </table>
               </div>
             </div>
           </div>
+        </div>
+    </div>
+    <div class="container taxpayer">
+      <div id="reg-tax-payer" class="tab-container">
+        <div class="tab-links">
+          <a href="#register-new-tax-payer" onclick="openTab(event, 'register-new-tax-payer')">Register New Tax
+            Payer</a>
+          <a href="#tp-details" onclick="openTab(event, 'tp-details')">TP Details</a>
+          <a href="#tp-contacts" onclick="openTab(event, 'tp-contacts')">TP Contacts</a>
+        </div>
+
+        <div class="tab-content">
+          <div id="register-new-tax-payer" class="tab-panel1 active">
+            <form>
+              <h4 class="heading">Core Details</h4>
+              <div class="row">
+                <label for="tin-number">TIN Number:</label>
+                <input type="text" id="tin-number">
+              </div>
+              <div class="row">
+                <label for="tax-payer-type">Tax Payer Type:</label>
+                <input type="text" id="tax-payer-type">
+              </div>
+              <div class="row">
+                <label for="organization-type">Organization Type:</label>
+                <input type="text" id="organization-type">
+              </div>
+
+              <h4 class="heading">Names</h4>
+              <div class="row">
+                <div class="checkbox-row">
+                  <input type="checkbox" id="registered">
+                  <label for="registered">Registered</label>
+                  <input type="checkbox" id="trade">
+                  <label for="trade">Trade</label>
+                </div>
+              </div>
+              <div class="row">
+                <label for="registered-name">Registered Name:</label>
+                <input type="text" id="registered-name">
+              </div>
+              <div class="row">
+                <input type="checkbox" id="primary-name">
+                <label for="primary-name">Primary Name?</label>
+              </div>
+              <div class="row">
+                <label for="trade-name">Trade Name:</label>
+                <input type="text" id="trade-name">
+              </div>
+
+              <div class="buttons">
+                <input type="submit" value="Save">
+                <input type="reset" value="Cancel">
+              </div>
+            </form>
+          </div>
 
 
-          <div id="inventory-report">
-            <h3 class="heading">Inventory Report</h3>
+          <div id="tp-details" class="tab-panel2 ">
+            <form>
+              <h4 class="heading">Details</h4>
+              <div class="row">
+                <div class="detail-col">
+                  <label for="business-nature">Business Nature:</label>
+                  <input type="text" id="business-nature">
+                </div>
+                <div class="detail-col">
+
+                  <label for="business-license-number">Business License Number:</label>
+                  <input type="text" id="business-license-number">
+                </div>
+              </div>
+
+              <h4 class="heading">Contact Details</h4>
+              <div class="row">
+                <div class="contact-col">
+
+                  <label for="address">Address:</label>
+                  <input type="text" id="address">
+
+                </div>
+                <div class="contact-col">
+
+                  <label for="village">Village:</label>
+                  <input type="text" id="village">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="contact-col">
+                  <label for="island">Island:</label>
+                  <input type="text" id="island">
+                </div>
+                <div class="contact-col">
+                  <label for="country">Country:</label>
+                  <input type="text" id="country">
+                </div>
+              </div>
+
+              <h4 class="heading">Phone Types</h4>
+              <div class="row">
+                <!-- <label>Phone Types:</label> -->
+                <div class="phone-col">
+                  <input type="checkbox" id="home"><label for="home">Home</label>
+                  <input type="checkbox" id="mobile"><label for="mobile">Mobile</label>
+                  <input type="checkbox" id="business"><label for="business">Business</label>
+                  <input type="checkbox" id="fax"><label for="fax">Fax</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="phone-col">
+                  <label for="phone-country">Country:</label>
+                  <input type="text" id="phone-country">
+                </div>
+                <div class="phone-col">
+
+                  <label for="phone-number1">Phone Number 1:</label>
+                  <input type="text" id="phone-number1">
+                </div>
+              </div>
+              <div class="row">
+                <div class="phone-col">
+
+                  <label for="area-code">Area Code:</label>
+                  <input type="text" id="area-code">
+                </div>
+                <div class="phone-col">
+
+                  <label for="phone-number2">Phone Number 2:</label>
+                  <input type="text" id="phone-number2">
+                </div>
+              </div>
+              <div class="buttons">
+                <input type="submit" value="Save">
+                <input type="reset" value="Cancel">
+              </div>
+            </form>
+          </div>
+
+          <div id="tp-contacts" class="tab-panel3">
+            <form>
+
+
+              <h4 class="heading">Email Types</h4>
+              <div class="row">
+                <!-- <label>Phone Types:</label> -->
+                <div class="email-col">
+                  <input type="checkbox" id="primary"><label for="primary">Primary</label>
+                  <input type="checkbox" id="secondary"><label for="secondary">Secondary</label>
+
+                </div>
+              </div>
+              <h4 class="heading">Person In Charge</h4>
+              <div class="row">
+                <div class="person-col">
+
+                  <label for="first-name">First Name:</label>
+                  <input type="text" id="first-name">
+
+                </div>
+                <div class="person-col">
+
+                  <label for="last-name">Last Name:</label>
+                  <input type="text" id="last-name">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="person-col">
+                  <label for="landline">Landline:</label>
+                  <input type="text" id="landline">
+                </div>
+                <div class="person-col">
+                  <label for="mobile">Mobile:</label>
+                  <input type="text" id="mobile">
+                </div>
+              </div>
+
+
+              <div class="row">
+                <div class="person-col">
+                  <label for="email">Email Address:</label>
+                  <input type="text" id="email">
+                </div>
+
+              </div>
+
+              <div class="buttons">
+                <input type="submit" value="Save">
+                <input type="reset" value="Cancel">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div id="view-tax-payer">
+        <h3 class="heading">Tax Payer List</h3>
+        <form>
+          <div class="form-group">
+            <input type="text" id="tax-payer-search" name="tax-payer-search" value="">
+            <input type="submit" value="Search Tax Payer">
+          </div>
+        </form>
+        <div>
+          <p>Total No. of taxpayers: <input type="text" id="total-taxpayers" name="total-taxpayers"></p>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <td>TIN Number</td>
+              <td>Registered Name</td>
+              <td>Trade Name</td>
+              <td>Organization Type</td>
+              <td colspan="2">Comments</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td onclick="showUserInfo(this)">001</td>
+              <td>Dummy Company 1</td>
+              <td>Trade Name 1</td>
+              <td>Organization Type 1</td>
+              <td colspan="2">
+                <button>New</button>
+                <button>View</button>
+              </td>
+            </tr>
+            <tr>
+              <td onclick="showUserInfo(this)">002</td>
+              <td>Dummy Company 2</td>
+              <td>Trade Name 2</td>
+              <td>Organization Type 2</td>
+              <td colspan="2">
+                <button>New</button>
+                <button>View</button>
+              </td>
+            </tr>
+            <tr>
+              <td onclick="showUserInfo(this)">003</td>
+              <td>Dummy Company 3</td>
+              <td>Trade Name 3</td>
+              <td>Organization Type 3</td>
+              <td colspan="2">
+                <button>New</button>
+                <button>View</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+
+
+    </div>
+
+    <div class="container sales-report">
+      <div id="sales-report">
+        <h3 class="heading">Sales Report</h3>
+        <div class="report-form">
+          <div class="form-col-section">
+            <div class="form-group">
+              <div class="column">
+                <div class="inner-column">
+                  <label for="tax-payer">Tax Payer:</label>
+                  <select class="dropdown-menu" id="tax-payer">
+                    <option value="tax-payer-1">Tax Payer 1</option>
+                    <option value="tax-payer-2">Tax Payer 2</option>
+                    <option value="tax-payer-3">Tax Payer 3</option>
+                  </select>
+                </div>
+                <div class="inner-column">
+                  <label for="store">Store:</label>
+                  <select class="dropdown-menu" id="store">
+                    <option value="store-1">Store 1</option>
+                    <option value="store-2">Store 2</option>
+                    <option value="store-3">Store 3</option>
+                  </select>
+                </div>
+              </div>
+              <div class="column">
+                <div class="inner-column">
+
+                  <label for="ct-type">CT Type:</label>
+                  <select class="dropdown-menu" id="ct-type">
+                    <option value="ct-type-1">CT Type 1</option>
+                    <option value="ct-type-2">CT Type 2</option>
+                    <option value="ct-type-3">CT Type 3</option>
+                  </select>
+                </div>
+                <div class="inner-column">
+
+                  <label for="country">Country:</label>
+                  <select class="dropdown-menu" id="country">
+                    <option value="country-1">Country 1</option>
+                    <option value="country-2">Country 2</option>
+                    <option value="country-3">Country 3</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="date-from">Date Range From:</label>
+              <input class="calendar-dropdown" type="date" id="date-from" name="date-from">
+              <label for="date-to">Date Range To:</label>
+              <input class="calendar-dropdown" type="date" id="date-to" name="date-to">
+            </div>
+          </div>
+          <div class="form-group form-action">
+            <button type="button" onclick="viewSalesReport()">View</button>
+            <button type="button" onclick="clearSalesReport()">Clear</button>
+          </div>
+        </div>
+
+
+        <table>
+          <thead>
+            <tr>
+              <td>Serial Number</td>
+              <td>Date</td>
+              <td>Time Stamp</td>
+              <td>Form of Payments</td>
+              <td>Customer Number</td>
+              <td>Customer TIN</td>
+              <td>Reference Number</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>2023-05-01</td>
+              <td>10:30 AM</td>
+              <td>Cash</td>
+              <td>12345</td>
+              <td>ABC123</td>
+              <td onclick="showReceiptInfo(this)">REF001</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>2023-05-02</td>
+              <td>11:45 AM</td>
+              <td>Credit Card</td>
+              <td>67890</td>
+              <td>DEF456</td>
+              <td onclick="showReceiptInfo(this)">REF002</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>2023-05-03</td>
+              <td>02:15 PM</td>
+              <td>Debit Card</td>
+              <td>54321</td>
+              <td>GHI789</td>
+              <td onclick="showReceiptInfo(this)">REF003</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+
+      <div id="exp-report" class="tab-container">
+        <div class="tab-links">
+          <a href="#create-new-expense" onclick="openTab(event, 'create-new-expense')">Create New Expense</a>
+          <a href="#view-expense-list" onclick="openTab(event, 'view-expense-list')">View Expense List</a>
+        </div>
+
+        <div class="tab-content">
+          <div id="create-new-expense" class="tab-panel1 active">
+            <form>
+              <h4 class="heading">Expense Details</h4>
+              <div class="row">
+                <label for="expense-date">Date:</label>
+                <input type="date" id="expense-date">
+              </div>
+              <div class="row">
+                <label for="expense-vendor"> Vendor/Tin#:</label>
+                <input type="text" id="expense-vendor">
+              </div>
+              <div class="row">
+                <label for="expenses-name">Expenses Name:</label>
+                <input type="text" id="expenses-name">
+              </div>
+              <div class="row">
+                <label for="expense-subtotal">Sub-Total:</label>
+                <input type="text" id="expense-subtotal">
+              </div>
+              <div class="row">
+                <label for="expense-ct">CT:</label>
+                <input type="text" id="expense-ct">
+              </div>
+              <div class="row">
+                <label for="expense-total">Total:</label>
+                <input type="text" id="expense-total">
+              </div>
+              <div class="row">
+                <label for="expense-attach">Attach:</label>
+                <input type="file" id="expense-attach">
+              </div>
+              <div class="row">
+                <label for="expense-notes">Notes:</label>
+                <input type="text" id="expense-notes">
+              </div>
+              <div class="buttons">
+                <input type="submit" value="Create" class="btn-icon">
+              </div>
+            </form>
+          </div>
+
+
+
+          <div id="view-expense-list" class="tab-panel2">
+
+            <h3 class="heading">Expense List</h3>
             <div class="report-form">
               <div class="form-col-section">
                 <div class="form-group">
@@ -812,8 +807,8 @@
                 </div>
               </div>
               <div class="form-group form-action">
-                <button type="button" onclick="viewInventoryReport()">View</button>
-                <button type="button" onclick="clearInventoryReport()">Clear</button>
+                <button type="button" onclick="viewExpenseList()">View</button>
+                <button type="button" onclick="clearExpenseList()">Clear</button>
               </div>
             </div>
 
@@ -821,225 +816,354 @@
               <thead>
                 <tr>
                   <td>Serial Number</td>
-                  <td>Product Name</td>
+                  <td>Expense Description</td>
                   <td>Category</td>
-                  <td>Quantity</td>
-                  <td>Price</td>
+                  <td>Amount</td>
+                  <td>Date</td>
                   <td>Store</td>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>1</td>
-                  <td>Product 1</td>
+                  <td>Expense 1</td>
                   <td>Category 1</td>
-                  <td>10</td>
                   <td>$10.00</td>
+                  <td>2023-05-01</td>
                   <td>Store 1</td>
                 </tr>
                 <tr>
                   <td>2</td>
-                  <td>Product 2</td>
+                  <td>Expense 2</td>
                   <td>Category 2</td>
-                  <td>5</td>
                   <td>$15.00</td>
+                  <td>2023-05-02</td>
                   <td>Store 2</td>
                 </tr>
                 <tr>
                   <td>3</td>
-                  <td>Product 3</td>
+                  <td>Expense 3</td>
                   <td>Category 1</td>
-                  <td>8</td>
                   <td>$12.50</td>
+                  <td>2023-05-03</td>
                   <td>Store 3</td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <div id="user-activity-report">
-            <h3 class="heading">User Activity Log Report</h3>
-            <div class="report-form">
-              <div class="form-group">
-                <div class="column">
-                  <div class="inner-column">
-                    <label for="user">User:</label>
-                    <select class="dropdown-menu" id="user">
-                      <option value="user-1">User 1</option>
-                      <option value="user-2">User 2</option>
-                      <option value="user-3">User 3</option>
-                    </select>
-                  </div>
-                  <div class="inner-column">
-                    <label for="activity">Activity:</label>
-                    <select class="dropdown-menu" id="activity">
-                      <option value="activity-1">Activity 1</option>
-                      <option value="activity-2">Activity 2</option>
-                      <option value="activity-3">Activity 3</option>
-                    </select>
-                  </div>
+
+        </div>
+      </div>
+
+
+      <div id="inventory-report">
+        <h3 class="heading">Inventory Report</h3>
+        <div class="report-form">
+          <div class="form-col-section">
+            <div class="form-group">
+              <div class="column">
+                <div class="inner-column">
+                  <label for="tax-payer">Tax Payer:</label>
+                  <select class="dropdown-menu" id="tax-payer">
+                    <option value="tax-payer-1">Tax Payer 1</option>
+                    <option value="tax-payer-2">Tax Payer 2</option>
+                    <option value="tax-payer-3">Tax Payer 3</option>
+                  </select>
                 </div>
-                <div class="column">
-                  <div class="inner-column">
-                    <label for="date-from">Date Range From:</label>
-                    <input class="calendar-dropdown" type="date" id="date-from" name="date-from">
-                  </div>
-                  <div class="inner-column">
-                    <label for="date-to">Date Range To:</label>
-                    <input class="calendar-dropdown" type="date" id="date-to" name="date-to">
-                  </div>
+                <div class="inner-column">
+                  <label for="store">Store:</label>
+                  <select class="dropdown-menu" id="store">
+                    <option value="store-1">Store 1</option>
+                    <option value="store-2">Store 2</option>
+                    <option value="store-3">Store 3</option>
+                  </select>
                 </div>
               </div>
-              <div class="form-group form-action">
-                <button type="button" onclick="viewActivityLogReport()">View</button>
-                <button type="button" onclick="clearActivityLogReport()">Clear</button>
+              <div class="column">
+                <div class="inner-column">
+                  <label for="category">Category:</label>
+                  <select class="dropdown-menu" id="category">
+                    <option value="category-1">Category 1</option>
+                    <option value="category-2">Category 2</option>
+                    <option value="category-3">Category 3</option>
+                  </select>
+                </div>
+                <div class="inner-column">
+                  <label for="country">Country:</label>
+                  <select class="dropdown-menu" id="country">
+                    <option value="country-1">Country 1</option>
+                    <option value="country-2">Country 2</option>
+                    <option value="country-3">Country 3</option>
+                  </select>
+                </div>
               </div>
             </div>
-
-            <table>
-              <thead>
-                <tr>
-                  <td>Serial Number</td>
-                  <td>User</td>
-                  <td>Activity</td>
-                  <td>Date</td>
-                  <td>Time</td>
-                  <td>Details</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>User 1</td>
-                  <td>Activity 1</td>
-                  <td>2023-05-01</td>
-                  <td>10:30 AM</td>
-                  <td>Details 1</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>User 2</td>
-                  <td>Activity 2</td>
-                  <td>2023-05-02</td>
-                  <td>11:45 AM</td>
-                  <td>Details 2</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>User 3</td>
-                  <td>Activity 3</td>
-                  <td>2023-05-03</td>
-                  <td>02:15 PM</td>
-                  <td>Details 3</td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="form-group">
+              <label for="date-from">Date Range From:</label>
+              <input class="calendar-dropdown" type="date" id="date-from" name="date-from">
+              <label for="date-to">Date Range To:</label>
+              <input class="calendar-dropdown" type="date" id="date-to" name="date-to">
+            </div>
           </div>
-
+          <div class="form-group form-action">
+            <button type="button" onclick="viewInventoryReport()">View</button>
+            <button type="button" onclick="clearInventoryReport()">Clear</button>
+          </div>
         </div>
 
-        <div class="container store">
-          <div id="register-store">
-            <h3 class="heading">Register New Store</h3>
-            <form>
-              <div class="store-form">
-                <div class="form-group">
-                  <label for="store-name">Store Name:</label>
-                  <input class="input-field" type="text" id="store-name" name="store-name" value="">
-                </div>
-                <div class="form-group">
-                  <label for="store-address">Store Address:</label>
-                  <input class="input-field" type="text" id="store-address" name="store-address" value="">
-                </div>
-                <div class="form-group">
-                  <label for="store-taxpayer">Store Tax Payer:</label>
-                  <input class="input-field" type="text" id="store-taxpayer" name="store-taxpayer" value="">
-                </div>
-                <div class="form-group">
-                  <label for="store-contract">Store Contract:</label>
-                  <input class="input-field" type="text" id="store-contract" name="store-contract" value="">
-                </div>
-                <div class="form-group">
-                  <label for="sdc-number">SDC #</label>
-                  <input class="input-field" type="text" id="sdc-number" name="sdc-number" value="">
-                </div>
-                <div class="form-group">
-                  <label for="smart-card">Smart Card #</label>
-                  <input class="input-field" type="text" id="smart-card" name="smart-card" value="">
-                </div>
+        <table>
+          <thead>
+            <tr>
+              <td>Serial Number</td>
+              <td>Product Name</td>
+              <td>Category</td>
+              <td>Quantity</td>
+              <td>Price</td>
+              <td>Store</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Product 1</td>
+              <td>Category 1</td>
+              <td>10</td>
+              <td>$10.00</td>
+              <td>Store 1</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Product 2</td>
+              <td>Category 2</td>
+              <td>5</td>
+              <td>$15.00</td>
+              <td>Store 2</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Product 3</td>
+              <td>Category 1</td>
+              <td>8</td>
+              <td>$12.50</td>
+              <td>Store 3</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="user-activity-report">
+        <h3 class="heading">User Activity Log Report</h3>
+        <div class="report-form">
+          <div class="form-group">
+            <div class="column">
+              <div class="inner-column">
+                <label for="user">User:</label>
+                <select class="dropdown-menu" id="user">
+                  <option value="user-1">User 1</option>
+                  <option value="user-2">User 2</option>
+                  <option value="user-3">User 3</option>
+                </select>
               </div>
-              <div class="form-group form-action">
-                <input type="submit" value="Create">
-                <input type="reset" value="Cancel">
+              <div class="inner-column">
+                <label for="activity">Activity:</label>
+                <select class="dropdown-menu" id="activity">
+                  <option value="activity-1">Activity 1</option>
+                  <option value="activity-2">Activity 2</option>
+                  <option value="activity-3">Activity 3</option>
+                </select>
               </div>
-            </form>
+            </div>
+            <div class="column">
+              <div class="inner-column">
+                <label for="date-from">Date Range From:</label>
+                <input class="calendar-dropdown" type="date" id="date-from" name="date-from">
+              </div>
+              <div class="inner-column">
+                <label for="date-to">Date Range To:</label>
+                <input class="calendar-dropdown" type="date" id="date-to" name="date-to">
+              </div>
+            </div>
           </div>
-          <div id="view-store">
-            <h3 class="heading">Store List</h3>
-            <form>
-              <div class="form-group">
-                <input type="text" id="store-search" name="store-search" value="">
-                <input type="submit" value="Search Store">
-              </div>
-            </form>
-
-            <table>
-              <thead>
-                <tr>
-                  <td>TIN Number</td>
-                  <td>Store Name</td>
-                  <td>Store Tax Payer</td>
-                  <td>Store Contact</td>
-                  <td colspan="2">Comments</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td onclick="showStoreInfo(this)">101</td>
-                  <td>Store 1</td>
-                  <td>Store Tax Payer 1</td>
-                  <td>Store Contact 1</td>
-                  <td colspan="2">
-                    <button>New</button>
-                    <button>View</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td onclick="showStoreInfo(this)">102</td>
-                  <td>Store 2</td>
-                  <td>Store Tax Payer 2</td>
-                  <td>Store Contact 2</td>
-                  <td colspan="2">
-                    <button>New</button>
-                    <button>View</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td onclick="showStoreInfo(this)">103</td>
-                  <td>Store 3</td>
-                  <td>Store Tax Payer 3</td>
-                  <td>Store Contact 3</td>
-                  <td colspan="2">
-                    <button>New</button>
-                    <button>View</button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+          <div class="form-group form-action">
+            <button type="button" onclick="viewActivityLogReport()">View</button>
+            <button type="button" onclick="clearActivityLogReport()">Clear</button>
           </div>
-
-
-
-
-
         </div>
 
-      </main>
-      <footer>
-        <p class="footer-content">&copy; 2023 Ministry of Revenue and Customs, Government of Tonga. All rights
-          reserved.
-        </p>
-      </footer>
+        <table>
+          <thead>
+            <tr>
+              <td>Serial Number</td>
+              <td>User</td>
+              <td>Activity</td>
+              <td>Date</td>
+              <td>Time</td>
+              <td>Details</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>User 1</td>
+              <td>Activity 1</td>
+              <td>2023-05-01</td>
+              <td>10:30 AM</td>
+              <td>Details 1</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>User 2</td>
+              <td>Activity 2</td>
+              <td>2023-05-02</td>
+              <td>11:45 AM</td>
+              <td>Details 2</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>User 3</td>
+              <td>Activity 3</td>
+              <td>2023-05-03</td>
+              <td>02:15 PM</td>
+              <td>Details 3</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
     </div>
+
+    <div class="container store">
+      <div id="register-store">
+        <h3 class="heading">Register New Store</h3>
+        <form>
+          <div class="store-form">
+            <div class="form-group">
+              <label for="store-name">Store Name:</label>
+              <input class="input-field" type="text" id="store-name" name="store-name" value="">
+            </div>
+            <div class="form-group">
+              <label for="store-address">Store Address:</label>
+              <input class="input-field" type="text" id="store-address" name="store-address" value="">
+            </div>
+            <div class="form-group">
+              <label for="store-taxpayer">Store Tax Payer:</label>
+              <input class="input-field" type="text" id="store-taxpayer" name="store-taxpayer" value="">
+            </div>
+            <div class="form-group">
+              <label for="store-contract">Store Contract:</label>
+              <input class="input-field" type="text" id="store-contract" name="store-contract" value="">
+            </div>
+            <div class="form-group">
+              <label for="sdc-number">SDC #</label>
+              <input class="input-field" type="text" id="sdc-number" name="sdc-number" value="">
+            </div>
+            <div class="form-group">
+              <label for="smart-card">Smart Card #</label>
+              <input class="input-field" type="text" id="smart-card" name="smart-card" value="">
+            </div>
+          </div>
+          <div class="form-group form-action">
+            <div class="btn-wd-icon">
+              <img width="20px" src="../assets/add.svg" alt="">
+              <input type="submit" value="Create" class="btn-icon">
+            </div>
+            <div class="btn-wd-icon">
+              <img width="20px" src="../assets/cross.svg" alt="">
+              <input type="reset" value="Cancel" class="btn-icon">
+            </div>
+
+          </div>
+        </form>
+      </div>
+      <div id="view-store">
+        <h3 class="heading">Store List</h3>
+<div class="main-bar">        <form>
+
+          <div class="form-group">
+            <input type="text" id="store-search" name="store-search" value="">
+          </div>
+          <div class="form-group">
+            <div class="btn-wd-icon">
+              <img width="20px" src="../assets/search.svg" alt="">
+              <input type="submit" value="Search Store" class="btn-icon">
+            </div>
+          </div>
+
+        </form>
+        <form>
+          <div class="form-group form-group-icon">
+
+            <div class="btn-wd-icon">
+              <img width="20px" src="../assets/search.svg" alt="">
+            </div>
+            <div class="btn-wd-icon">
+              <img width="20px" src="../assets/search.svg" alt="">
+            </div>
+            <div class="btn-wd-icon">
+              <img width="20px" src="../assets/search.svg" alt="">
+            </div>
+      </div>
+
+      </form>
+    </div>
+
+        <table>
+          <thead>
+            <tr>
+              <td>TIN Number</td>
+              <td>Store Name</td>
+              <td>Store Tax Payer</td>
+              <td>Store Contact</td>
+              <td colspan="2">Comments</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td onclick="showStoreInfo(this)">101</td>
+              <td>Store 1</td>
+              <td>Store Tax Payer 1</td>
+              <td>Store Contact 1</td>
+              <td colspan="2">
+                <button>New</button>
+                <button>View</button>
+              </td>
+            </tr>
+            <tr>
+              <td onclick="showStoreInfo(this)">102</td>
+              <td>Store 2</td>
+              <td>Store Tax Payer 2</td>
+              <td>Store Contact 2</td>
+              <td colspan="2">
+                <button>New</button>
+                <button>View</button>
+              </td>
+            </tr>
+            <tr>
+              <td onclick="showStoreInfo(this)">103</td>
+              <td>Store 3</td>
+              <td>Store Tax Payer 3</td>
+              <td>Store Contact 3</td>
+              <td colspan="2">
+                <button>New</button>
+                <button>View</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+
+
+
+    </div>
+
+    </main>
+    <footer>
+      <p class="footer-content">&copy; 2023 Ministry of Revenue and Customs, Government of Tonga. All rights
+        reserved.
+      </p>
+    </footer>
+  </div>
 
   </div>
   <script>
