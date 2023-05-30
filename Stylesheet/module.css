@@ -125,12 +125,28 @@
    padding: 8px;
 }
 
-#view-users form , #view-store form {
+form.search-form{
    display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.tab-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tab-btn div {
+    margin: 4px;
 }
 .main-bar {
     display: flex;
     justify-content: space-between;
+}
+.main-bar form{
+    display: flex;
+}
+.main-bar.bar-end{
+    justify-content: flex-end;
 }
 
 
@@ -143,9 +159,9 @@ table{
 width: 100%;
 border-collapse: collapse;
 }
-/* ////////////////////////////usermodule */
+/* ////////////////////////////headings */
 
-.usermodule .heading {
+ .heading {
     text-decoration: underline;
 }
 
@@ -533,10 +549,6 @@ border-collapse: collapse;
 
 /* Styles for the Sales Report */
 
-#sales-report .heading {
-    font-size: 1.5em;
-    margin-bottom: 20px;
-}
 
 
 #sales-report .report-form {
@@ -621,10 +633,7 @@ border-collapse: collapse;
 
 /* Styles for the Receipt Info */
 
-#receipt-info .heading {
-    font-size: 1.5em;
-    margin-bottom: 20px;
-}
+
 
 
 
@@ -639,6 +648,11 @@ border-collapse: collapse;
     text-align: center;
     border-bottom: 1px solid #d2d2d2;
     background-color: #f0f0f0;
+}
+
+.receipt-details{
+    display: flex;
+    justify-content: center;
 }
 
 /* Styles for the Create New Expense */
@@ -708,10 +722,7 @@ border-collapse: collapse;
   
 /* Styles for the Inventory Report */
 
-#inventory-report .heading {
-    font-size: 1.5em;
-    margin-bottom: 20px;
-}
+
 
 #inventory-report .report-form {
     margin-bottom: 20px;
@@ -807,10 +818,7 @@ border-collapse: collapse;
 
 /* Styles for the View Expense List */
 
-#view-expense-list .heading {
-    font-size: 1.5em;
-    margin-bottom: 20px;
-}
+
 
 #view-expense-list .report-form {
     margin-bottom: 20px;
@@ -883,10 +891,7 @@ border-collapse: collapse;
 
 /* Styles for the User Activity Log Report */
 
-#user-activity-report .heading {
-    font-size: 1.5em;
-    margin-bottom: 20px;
-}
+
 
 #user-activity-report .report-form {
     margin-bottom: 20px;
