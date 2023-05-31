@@ -101,6 +101,49 @@
     display: block;
 }
 
+/* //////////////////////////////////////////////responsiveness-pj */
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+    .module-page {
+        flex-direction: column;
+    }
+
+    .right-bar {
+        margin: 0;
+    }
+
+    .sidebar {
+        padding: 20px;
+    }
+
+    .container .submenu,
+    .container .submenu-items {
+        width: 100%;
+    }
+
+    .container .submenu-items {
+        display: none;
+        background: #000080;
+    }
+
+    .container .submenu>li>.toggle-menu:checked~.submenu-items {
+        display: none;
+    }
+
+    .container .submenu>li>.toggle-menu:checked~.submenu-items,
+    .container .submenu>li>.toggle-menu:checked~.submenu-items li {
+        border: none;
+    }
+
+    .container .submenu>li>.toggle-menu:checked~.submenu-items li a {
+        padding: 15px;
+        color: white;
+    }
+
+    .container .submenu>li>label::after {
+        display: none;
+    }
+}
 
 /* ////////////////////btn-style */
 
@@ -109,7 +152,7 @@
     align-items: center;
     background: #dedede;
     border: 1px solid;
-    padding:5px;
+    padding: 5px;
 }
 
 .btn-icon {
@@ -118,50 +161,64 @@
 }
 
 /* ///////////////form */
+.form-group>input,
+.form-group>select {
+    border: 1px solid #d2d2d2;
+}
+
+.dropdown-menu {
+    width: 150px;
+}
+
 .form-group>label,
 .form-group>input,
 .form-group>select {
-   border: 1px solid #d2d2d2;
-   padding: 8px;
+    padding: 8px;
 }
 
-form.search-form{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-}
-.tab-btn{
+form.search-form {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+.tab-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .tab-btn div {
     margin: 4px;
 }
+
 .main-bar {
     display: flex;
     justify-content: space-between;
 }
-.main-bar form{
+
+.main-bar form {
     display: flex;
 }
-.main-bar.bar-end{
+
+.main-bar.bar-end {
     justify-content: flex-end;
 }
 
 
-.form-group-icon{
+.form-group-icon {
     display: flex;
 }
 
 /* /////////////////table */
-table{
-width: 100%;
-border-collapse: collapse;
+table {
+    width: 100%;
+    border-collapse: collapse;
 }
+
 /* ////////////////////////////headings */
 
- .heading {
+.heading {
     text-decoration: underline;
 }
 
@@ -328,7 +385,78 @@ border-collapse: collapse;
     border: 2px solid #b8b8b898;
 }
 
+/* //////////////////////////////////////////////responsiveness-pj */
 
+/* Responsive styles */
+@media screen and (max-width: 600px) {
+
+    .form-group label,
+    .form-group input,
+    .form-group select {
+        font-size: 1.1em;
+        line-height: 1.2;
+    }
+
+    .form-action {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* Additional styles for specific sections */
+#view-users table {
+    background-color: #ababab;
+}
+
+#role-permission .tab-content {
+    height: auto;
+    padding: 20px 5px;
+    border: 2px solid #b8b8b898;
+}
+
+#role-permission .tab-links a {
+    background-color: #ccc;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px 5px 0 0;
+}
+
+#role-permission .tab-links a:hover {
+    background-color: #999;
+    color: #fff;
+}
+
+#role-permission table th,
+#role-permission table td {
+    padding: 5px;
+    text-align: left;
+    vertical-align: top;
+}
+
+#role-permission td label {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+}
+
+#role-permission td input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+#role-permission .role-add {
+    display: flex;
+    justify-content: space-around;
+}
+
+#role-permission input#new-role-type {
+    width: 50%;
+}
+
+#view-role-types .role-types tbody {
+    padding: 20px 5px;
+    border: 2px solid #b8b8b898;
+}
 
 /*   
   /////////////////////////////////////////////////////////////////////
@@ -522,6 +650,56 @@ border-collapse: collapse;
     justify-content: space-around;
 }
 
+/* Responsive Styles */
+
+@media screen and (max-width: 768px) {
+    .row {
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+
+    .col,
+    .checkbox-row,
+    .detail-col,
+    .contact-col,
+    .phone-col {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .row label {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .buttons {
+        flex-wrap: wrap;
+    }
+
+    .btn-wd-icon {
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+    .btn-wd-icon img {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    .row label {
+        font-size: 14px;
+    }
+
+    .btn-icon {
+        font-size: 12px;
+    }
+}
+
 /*   
   /////////////////////////////////////////////////////////////////////
   /////////////////////////////////////////////////////////////////////
@@ -535,15 +713,15 @@ border-collapse: collapse;
 #exp-report .tab-links a {
     display: inline-block;
     padding: 5px 10px;
-    background-color: #ccc;
+    background-color: #f4f7fc;
     color: #333;
     text-decoration: none;
     border-radius: 5px 5px 0 0;
 }
 
 #exp-report .tab-content {
-    background-color: #dcdcdc;
-    padding: 5px;
+    background-color: #f4f7fc;
+    padding: 15px;
     border: 2px solid #ccc;
 }
 
@@ -602,6 +780,7 @@ border-collapse: collapse;
 #sales-report .inner-column {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
 }
 
 #sales-report .form-action button {
@@ -650,7 +829,7 @@ border-collapse: collapse;
     background-color: #f0f0f0;
 }
 
-.receipt-details{
+.receipt-details {
     display: flex;
     justify-content: center;
 }
@@ -659,67 +838,67 @@ border-collapse: collapse;
 #create-new-expense .tab-panel1 {
     background-color: #f0f0f0;
     margin: 30px auto;
-  }
-  
-  #create-new-expense label {
+}
+
+#create-new-expense label {
     display: block;
     text-align: left;
     font-size: 1.2em;
     line-height: 1.2;
     width: 30%;
-  }
-  
-  #create-new-expense input {
+}
+
+#create-new-expense input {
     font-size: 1.2em;
-  }
-  
-  #create-new-expense .row {
+}
+
+#create-new-expense .row {
     display: flex;
-  }
-  
-  #create-new-expense .row>label {
+}
+
+#create-new-expense .row>label {
     margin-right: 10px;
 
-  }
- 
+}
 
-  #create-new-expense .row>input {
+
+#create-new-expense .row>input {
     border: 1px solid #d2d2d2;
     padding: 8px;
-  }
-  
-  #create-new-expense .input-field {
+}
+
+#create-new-expense .input-field {
     width: 65%;
-  }
-  
-  #create-new-expense .buttons {
+}
+
+#create-new-expense .buttons {
     display: flex;
     justify-content: space-around;
     width: 60%;
     margin: 0 auto;
-  }
-  
-  @media screen and (max-width: 600px) {
+}
+
+@media screen and (max-width: 600px) {
     #create-new-expense form {
-      margin-top: 20px;
+        margin-top: 20px;
     }
-  
+
     #create-new-expense label {
-      font-size: 1.1em;
-      line-height: 1.2;
+        font-size: 1.1em;
+        line-height: 1.2;
     }
-  
+
     #create-new-expense input {
-      font-size: 1.1em;
-      line-height: 1.5;
+        font-size: 1.1em;
+        line-height: 1.5;
     }
-  
+
     #create-new-expense input[type="submit"] {
-      font-size: 1.1em;
-      line-height: 1.5;
+        font-size: 1.1em;
+        line-height: 1.5;
     }
-  }
-  
+}
+
 /* Styles for the Inventory Report */
 
 
@@ -765,6 +944,7 @@ border-collapse: collapse;
 #inventory-report .inner-column {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
 }
 
 #inventory-report .form-action button {
@@ -861,6 +1041,7 @@ border-collapse: collapse;
 #view-expense-list .inner-column {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
 }
 
 #view-expense-list .form-action button {
@@ -934,6 +1115,7 @@ border-collapse: collapse;
 #user-activity-report .inner-column {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
 }
 
 #user-activity-report .form-action button {
@@ -960,6 +1142,62 @@ border-collapse: collapse;
     cursor: pointer;
 }
 
+/* //////////////////////////////////////////////responsiveness-pj */
+
+
+/* Responsive styles */
+@media (min-width: 768px) {
+    .report-form .form-group {
+        flex: 1 1 calc(50% - 10px);
+        margin-right: 10px;
+    }
+
+    .report-form .form-group:nth-child(even) {
+        margin-right: 0;
+    }
+
+    .column {
+        flex: 1;
+    }
+
+    .inner-column {
+        margin-right: 10px;
+    }
+}
+
+@media (min-width: 992px) {
+    .report-form .form-group {
+        flex: 1 1 calc(33.33% - 10px);
+        margin-right: 10px;
+    }
+
+    .report-form .form-group:nth-child(3n) {
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .report-form .form-group {
+        flex: 1 1 calc(25% - 10px);
+        margin-right: 10px;
+    }
+
+    .report-form .form-group:nth-child(4n) {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .main-bar.bar-end {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .form-group-icon {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+}
 
 /*   
   /////////////////////////////////////////////////////////////////////
@@ -1003,29 +1241,6 @@ border-collapse: collapse;
     margin: 0 auto;
 }
 
-@media screen and (max-width: 600px) {
-    #register-store form {
-        margin-top: 20px;
-    }
-
-    #register-store label {
-        font-size: 1.1em;
-        line-height: 1.2;
-    }
-
-    #register-store input {
-        font-size: 1.1em;
-        line-height: 1.5;
-    }
-
-    #register-store button[type="submit"] {
-        font-size: 1.1em;
-        line-height: 1.5;
-    }
-}
-
-
-
 /* Styles for the Store List */
 
 
@@ -1059,7 +1274,38 @@ border-collapse: collapse;
 
 #store-info table {
     background-color: #ced0d2;
-   
+
+}
+
+
+/* //////////////////////////////////////////////responsiveness-pj */
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .store-form .form-group {
+        flex-direction: column;
+    }
+
+    .store-form label {
+        width: 100%;
+    }
+
+    .store-form input {
+        width: 100%;
+    }
+
+    #view-store .main-bar {
+        flex-direction: column;
+    }
+
+    #view-store #store-search {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #view-store .form-group-icon {
+        justify-content: center;
+    }
 }
 
 /*   
