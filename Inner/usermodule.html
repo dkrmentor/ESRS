@@ -11,56 +11,58 @@
 </head>
 
 <body>
-  <div class="module-page">
+  
 
-    <sidebar class="sidebar container">
-      <label class="menu">Main Menu</label>
-
-      <ul class="submenu">
-        <li>
-          <input type="checkbox" id="toggle-user" class="toggle-menu">
-          <label for="toggle-user">User</label>
-          <ul class="submenu-items">
-            <li><a href="#add-user">Add New User</a></li>
-            <li><a href="#view-users">View User List</a></li>
-            <li><a href="#role-permission">Role/Permission</a></li>
-          </ul>
-        </li>
-        <li>
-          <input type="checkbox" id="toggle-taxpayer" class="toggle-menu">
-          <label for="toggle-taxpayer">Tax Payer</label>
-          <ul class="submenu-items">
-            <li><a href="#reg-tax-payer">Register New Tax Payer</a></li>
-            <li><a href="#view-tax-payer">View Tax Payer List</a></li>
-          </ul>
-        </li>
-        <li>
-          <input type="checkbox" id="toggle-reports" class="toggle-menu">
-          <label for="toggle-reports">Reports</label>
-          <ul class="submenu-items">
-            <li><a href="#sales-report">Sales Report</a></li>
-            <li><a href="#exp-report">Expenses Report</a></li>
-            <li><a href="#inventory-report">Inventory Report</a></li>
-            <li><a href="#user-activity-report">User Activity Report</a></li>
-          </ul>
-        </li>
-        <li>
-          <input type="checkbox" id="toggle-stores" class="toggle-menu">
-          <label for="toggle-stores">Stores</label>
-          <ul class="submenu-items">
-            <li><a href="#register-store">Register New Store</a></li>
-            <li><a href="#view-store">View Store List</a></li>
-          </ul>
-        </li>
-      </ul>
-    </sidebar>
-
-
+    <div class="module-page">
+      <sidebar class="sidebar container">
+        <label class="menu">Main Menu</label>
+    
+        <ul class="submenu">
+          <li>
+            <input type="checkbox" id="toggle-user" class="toggle-menu">
+            <label for="toggle-user">User</label>
+            <ul class="submenu-items">
+              <li><a href="#add-user">Add New User</a></li>
+              <li><a href="#view-users">View User List</a></li>
+              <li><a href="#role-permission">Role/Permission</a></li>
+            </ul>
+          </li>
+          <li>
+            <input type="checkbox" id="toggle-taxpayer" class="toggle-menu">
+            <label for="toggle-taxpayer">Tax Payer</label>
+            <ul class="submenu-items">
+              <li><a href="#reg-tax-payer">Register New Tax Payer</a></li>
+              <li><a href="#view-tax-payer">View Tax Payer List</a></li>
+            </ul>
+          </li>
+          <li>
+            <input type="checkbox" id="toggle-reports" class="toggle-menu">
+            <label for="toggle-reports">Reports</label>
+            <ul class="submenu-items">
+              <li><a href="#sales-report">Sales Report</a></li>
+              <li><a href="#exp-report">Expenses Report</a></li>
+              <li><a href="#inventory-report">Inventory Report</a></li>
+              <li><a href="#user-activity-report">User Activity Report</a></li>
+            </ul>
+          </li>
+          <li>
+            <input type="checkbox" id="toggle-stores" class="toggle-menu">
+            <label for="toggle-stores">Stores</label>
+            <ul class="submenu-items">
+              <li><a href="#register-store">Register New Store</a></li>
+              <li><a href="#view-store">View Store List</a></li>
+            </ul>
+          </li>
+        </ul>
+      </sidebar>
+   
+    
+  
 
 
     <div class="right-bar">
 
-      <header class="main-header">
+      <header class="main-header web">
         <div class="logo">
           <img src="../assets/logo.png" alt="Ministry of Revenue and Customs">
         </div>
@@ -899,7 +901,7 @@
                       <div class="column">
                         <div class="inner-column">
                           <label for="category">Category:</label>
-                      
+
                           <select class="dropdown-menu" id="category">
                             <option value="category-1">Category 1</option>
                             <option value="category-2">Category 2</option>
@@ -1333,6 +1335,28 @@
     </div>
 
   </div>
+
+
+  <script>
+    function toggleMenu() {
+      var menu = document.querySelector('.submenu');
+      menu.classList.toggle('show');
+    }
+  
+    function isMobileView() {
+      return window.innerWidth <= 768; // Adjust the width as per your requirements
+    }
+  
+    var toggleButton = document.querySelector('.menu');
+  
+    toggleButton.addEventListener('click', function () {
+      if (isMobileView()) {
+        toggleMenu();
+      }
+    });
+  </script>
+  
+
   <script>
     ///////////all tab opening
     const openTab = (event, tabId) => {
